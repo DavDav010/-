@@ -21,549 +21,316 @@
     }
 
     html { scroll-behavior: smooth; }
-
-    body {
-      font-family: 'Inter', sans-serif;
-      background: var(--coal);
-      color: var(--cream);
-      overflow-x: hidden;
-    }
+    body { font-family: 'Inter', sans-serif; background: var(--coal); color: var(--cream); overflow-x: hidden; }
 
     /* ── NAV ── */
-    nav {
-      position: fixed;
-      top: 0; left: 0; right: 0;
-      z-index: 100;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 1.25rem 5vw;
-      background: rgba(28,26,23,0.85);
-      backdrop-filter: blur(12px);
-      border-bottom: 1px solid var(--divider);
-    }
-
-    .nav-logo {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.55rem;
-      font-weight: 700;
-      color: var(--cream);
-      letter-spacing: 0.02em;
-    }
-
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 1.25rem 5vw; background: rgba(28,26,23,0.85); backdrop-filter: blur(12px); border-bottom: 1px solid var(--divider); }
+    .nav-logo { font-family: 'Playfair Display', serif; font-size: 1.55rem; font-weight: 700; color: var(--cream); letter-spacing: 0.02em; }
     .nav-logo span { color: var(--bronze); }
-
-    .nav-links {
-      display: flex;
-      gap: 2.5rem;
-      list-style: none;
-    }
-
-    .nav-links a {
-      color: rgba(245,240,232,0.7);
-      text-decoration: none;
-      font-size: 1.15rem;
-      font-weight: 500;
-      letter-spacing: 0.05em;
-      text-transform: uppercase;
-      transition: color 0.2s;
-    }
-
+    .nav-links { display: flex; gap: 2.5rem; list-style: none; }
+    .nav-links a { color: rgba(245,240,232,0.7); text-decoration: none; font-size: 1.15rem; font-weight: 500; letter-spacing: 0.05em; text-transform: uppercase; transition: color 0.2s; }
     .nav-links a:hover { color: var(--bronze-light); }
-
-    .nav-cta {
-      background: var(--bronze);
-      color: var(--coal) !important;
-      padding: 0.6rem 1.4rem;
-      border-radius: 2px;
-      font-weight: 600 !important;
-      transition: background 0.2s !important;
-    }
-
+    .nav-cta { background: var(--bronze); color: var(--coal) !important; padding: 0.6rem 1.4rem; border-radius: 2px; font-weight: 600 !important; transition: background 0.2s !important; }
     .nav-cta:hover { background: var(--bronze-light) !important; color: var(--coal) !important; }
 
     /* ── HERO ── */
-    .hero {
-      min-height: 100vh;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      align-items: center;
-      padding: 0 5vw;
-      padding-top: 80px;
-      gap: 4rem;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .hero::before {
-      content: '';
-      position: absolute;
-      top: 0; right: 0;
-      width: 55%;
-      height: 100%;
-      background: linear-gradient(135deg, var(--card-bg) 0%, #2a2520 100%);
-      clip-path: polygon(10% 0, 100% 0, 100% 100%, 0% 100%);
-    }
-
+    .hero { min-height: 100vh; display: grid; grid-template-columns: 1fr 1fr; align-items: center; padding: 0 5vw; padding-top: 80px; gap: 4rem; position: relative; overflow: hidden; }
+    .hero::before { content: ''; position: absolute; top: 0; right: 0; width: 55%; height: 100%; background: linear-gradient(135deg, var(--card-bg) 0%, #2a2520 100%); clip-path: polygon(10% 0, 100% 0, 100% 100%, 0% 100%); }
     .hero-text { position: relative; z-index: 2; }
-
-    .hero-eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.75rem;
-      font-size: 1.95rem;
-      font-weight: 600;
-      letter-spacing: 0.05em;
-      text-transform: uppercase;
-      color: var(--bronze);
-      margin-bottom: 1.75rem;
-    }
-
-    .hero-eyebrow::before {
-      content: '';
-      display: block;
-      width: 2.5rem;
-      height: 1px;
-      background: var(--bronze);
-    }
-
-    .hero h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(2.6rem, 5vw, 4.2rem);
-      line-height: 1.1;
-      font-weight: 700;
-      margin-bottom: 1.5rem;
-      color: var(--cream);
-    }
-
-    .hero h1 em {
-      font-style: italic;
-      color: var(--bronze);
-    }
-
-    .hero-desc {
-      font-size: 1.25rem;
-      line-height: 1.75;
-      color: rgba(245,240,232,0.65);
-      max-width: 440px;
-      margin-bottom: 2.5rem;
-    }
-
-    .hero-actions {
-      display: flex;
-      align-items: center;
-      gap: 1.5rem;
-      flex-wrap: wrap;
-    }
-
-    .btn-primary {
-      background: var(--bronze);
-      color: var(--coal);
-      padding: 0.9rem 2.2rem;
-      font-size: 1.5rem;
-      font-weight: 600;
-      letter-spacing: 0.05em;
-      border: none;
-      border-radius: 2px;
-      cursor: pointer;
-      text-decoration: none;
-      transition: background 0.25s, transform 0.2s;
-      display: inline-block;
-    }
-
+    .hero-eyebrow { display: inline-flex; align-items: center; gap: 0.75rem; font-size: 1.95rem; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; color: var(--bronze); margin-bottom: 1.75rem; }
+    .hero-eyebrow::before { content: ''; display: block; width: 2.5rem; height: 1px; background: var(--bronze); }
+    .hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(2.6rem, 5vw, 4.2rem); line-height: 1.1; font-weight: 700; margin-bottom: 1.5rem; color: var(--cream); }
+    .hero h1 em { font-style: italic; color: var(--bronze); }
+    .hero-desc { font-size: 1.25rem; line-height: 1.75; color: rgba(245,240,232,0.65); max-width: 440px; margin-bottom: 2.5rem; }
+    .hero-actions { display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap; }
+    .btn-primary { background: var(--bronze); color: var(--coal); padding: 0.9rem 2.2rem; font-size: 1.5rem; font-weight: 600; letter-spacing: 0.05em; border: none; border-radius: 2px; cursor: pointer; text-decoration: none; transition: background 0.25s, transform 0.2s; display: inline-block; }
     .btn-primary:hover { background: var(--bronze-light); transform: translateY(-2px); }
-
-    .btn-ghost {
-      color: var(--cream);
-      font-size: 1.25rem;
-      font-weight: 500;
-      text-decoration: none;
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      opacity: 0.75;
-      transition: opacity 0.2s;
-    }
-
+    .btn-ghost { color: var(--cream); font-size: 1.25rem; font-weight: 500; text-decoration: none; display: inline-flex; align-items: center; gap: 0.5rem; opacity: 0.75; transition: opacity 0.2s; }
     .btn-ghost:hover { opacity: 1; }
     .btn-ghost::after { content: '↓'; font-size: 1rem; }
-
-    .hero-photo {
-      position: relative;
-      z-index: 2;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      grid-template-rows: 260px 180px;
-      gap: 12px;
-    }
-
-    .photo-slot {
-      background: #2e2b27;
-      border-radius: 4px;
-      border: 1px dashed rgba(184,147,90,0.3);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: 0.6rem;
-      color: rgba(184,147,90,0.5);
-      font-size: 0.75rem;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      transition: border-color 0.2s;
-    }
-
+    .hero-photo { position: relative; z-index: 2; display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 260px 180px; gap: 12px; }
+    .photo-slot { background: #2e2b27; border-radius: 4px; border: 1px dashed rgba(184,147,90,0.3); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0.6rem; color: rgba(184,147,90,0.5); font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase; transition: border-color 0.2s; overflow: hidden; cursor: pointer; }
+    .photo-slot img { transition: transform 0.4s ease; }
+    .photo-slot:hover img { transform: scale(1.05); }
     .photo-slot:hover { border-color: rgba(184,147,90,0.6); }
-
     .photo-slot svg { opacity: 0.4; }
-
     .photo-slot.tall { grid-row: span 2; }
 
     /* ── STATS BAR ── */
-    .stats-bar {
-      background: var(--bronze);
-      padding: 2rem 5vw;
-      display: flex;
-      align-items: center;
-      justify-content: space-around;
-      gap: 2rem;
-      flex-wrap: wrap;
-    }
-
-    .stat-item {
-      text-align: center;
-      color: var(--coal);
-    }
-
-    .stat-number {
-      font-family: 'Playfair Display', serif;
-      font-size: 2.5rem;
-      font-weight: 700;
-      line-height: 1;
-      margin-bottom: 0.3rem;
-    }
-
-    .stat-label {
-      font-size: 0.8rem;
-      font-weight: 600;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      opacity: 0.75;
-    }
-
-    .stat-divider {
-      width: 1px;
-      height: 50px;
-      background: rgba(28,26,23,0.2);
-    }
+    .stats-bar { background: var(--bronze); padding: 2rem 5vw; display: flex; align-items: center; justify-content: space-around; gap: 2rem; flex-wrap: wrap; }
+    .stat-item { text-align: center; color: var(--coal); }
+    .stat-number { font-family: 'Playfair Display', serif; font-size: 2.5rem; font-weight: 700; line-height: 1; margin-bottom: 0.3rem; }
+    .stat-label { font-size: 0.8rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; opacity: 0.75; }
+    .stat-divider { width: 1px; height: 50px; background: rgba(28,26,23,0.2); }
 
     /* ── FEATURES ── */
-    .features {
-      padding: 7rem 5vw;
-    }
-
-    .section-header {
-      display: flex;
-      align-items: flex-end;
-      justify-content: space-between;
-      margin-bottom: 4rem;
-      flex-wrap: wrap;
-      gap: 2rem;
-    }
-
-    .section-eyebrow {
-      font-size: 1.75rem;
-      font-weight: 600;
-      letter-spacing: 0.05em;
-      text-transform: uppercase;
-      color: var(--bronze);
-      margin-bottom: 0.75rem;
-    }
-
-    .section-title {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(1.8rem, 3.5vw, 2.8rem);
-      font-weight: 700;
-      line-height: 1.2;
-      max-width: 420px;
-    }
-
-    .features-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1.5px;
-      background: var(--divider);
-    }
-
-    .feature-card {
-      background: var(--coal);
-      padding: 3rem 2.5rem;
-      position: relative;
-      overflow: hidden;
-      transition: background 0.3s;
-    }
-
-    .feature-card::after {
-      content: '';
-      position: absolute;
-      bottom: 0; left: 0;
-      width: 0;
-      height: 2px;
-      background: var(--bronze);
-      transition: width 0.4s ease;
-    }
-
+    .features { padding: 7rem 5vw; }
+    .section-header { display: flex; align-items: flex-end; justify-content: space-between; margin-bottom: 4rem; flex-wrap: wrap; gap: 2rem; }
+    .section-eyebrow { font-size: 1.75rem; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; color: var(--bronze); margin-bottom: 0.75rem; }
+    .section-title { font-family: 'Playfair Display', serif; font-size: clamp(1.8rem, 3.5vw, 2.8rem); font-weight: 700; line-height: 1.2; max-width: 420px; }
+    .features-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5px; background: var(--divider); }
+    .feature-card { background: var(--coal); padding: 3rem 2.5rem; position: relative; overflow: hidden; transition: background 0.3s; }
+    .feature-card::after { content: ''; position: absolute; bottom: 0; left: 0; width: 0; height: 2px; background: var(--bronze); transition: width 0.4s ease; }
     .feature-card:hover { background: #201e1b; }
     .feature-card:hover::after { width: 100%; }
+    .feature-icon { width: 56px; height: 56px; background: rgba(184,147,90,0.1); border-radius: 4px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.75rem; font-size: 1.6rem; }
+    .feature-card h3 { font-family: 'Playfair Display', serif; font-size: 1.25rem; font-weight: 600; margin-bottom: 0.9rem; color: var(--cream); }
+    .feature-card p { font-size: 1.00rem; line-height: 1.7; color: rgba(245,240,232,0.6); }
 
-    .feature-icon {
-      width: 56px;
-      height: 56px;
-      background: rgba(184,147,90,0.1);
-      border-radius: 4px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 1.75rem;
-      font-size: 1.6rem;
-    }
+    /* ── GALLERY PREVIEW ── */
+    .gallery-section { padding: 0 5vw 7rem; }
 
-    .feature-card h3 {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.25rem;
-      font-weight: 600;
-      margin-bottom: 0.9rem;
-      color: var(--cream);
-    }
-
-    .feature-card p {
-      font-size: 1.00rem;
-      line-height: 1.7;
-      color: rgba(245,240,232,0.6);
-    }
-
-    /* ── GALLERY ── */
-    .gallery-section {
-      padding: 0 5vw 7rem;
-    }
-
-    .gallery-grid {
+    .preview-grid {
       display: grid;
-      grid-template-columns: repeat(12, 1fr);
-      grid-template-rows: 280px 200px;
-      gap: 12px;
+      grid-template-columns: repeat(5, 1fr);
+      grid-template-rows: repeat(2, 220px);
+      gap: 10px;
     }
 
-    .gallery-slot {
+    .pv-item {
+      border-radius: 6px;
+      overflow: hidden;
+      cursor: pointer;
+      position: relative;
       background: var(--card-bg);
-      border-radius: 4px;
-      border: 1px dashed rgba(184,147,90,0.25);
+      border: 1px dashed rgba(184,147,90,0.2);
+      transition: transform 0.25s, border-color 0.25s;
+    }
+
+    .pv-item:hover { transform: scale(1.02); border-color: rgba(184,147,90,0.5); }
+
+    .pv-item img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.4s; }
+    .pv-item:hover img { transform: scale(1.06); }
+
+    .pv-placeholder {
+      width: 100%; height: 100%;
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      gap: 0.5rem; color: rgba(184,147,90,0.35);
+      font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase;
+    }
+    .pv-placeholder svg { width: 26px; height: 26px; opacity: 0.4; }
+
+    /* 10th tile — "show more" */
+    .pv-more {
+      border-radius: 6px;
+      overflow: hidden;
+      cursor: pointer;
+      position: relative;
+      background: var(--bronze);
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      gap: 0.8rem;
-      color: rgba(184,147,90,0.4);
-      font-size: 0.72rem;
+      gap: 0.5rem;
+      transition: background 0.25s, transform 0.25s;
+    }
+    .pv-more:hover { background: var(--bronze-light); transform: scale(1.02); }
+    .pv-more-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: var(--coal);
+      line-height: 1;
+    }
+    .pv-more-label {
+      font-size: 0.75rem;
+      font-weight: 600;
       letter-spacing: 0.1em;
       text-transform: uppercase;
-      transition: border-color 0.25s, background 0.25s;
-      cursor: pointer;
+      color: var(--coal);
+      opacity: 0.75;
     }
 
-    .gallery-slot:hover {
-      border-color: rgba(184,147,90,0.6);
-      background: #2a2722;
+    /* ── GALLERY MODAL ── */
+    .gmodal {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 200;
+      background: rgba(10,9,8,0.97);
+      flex-direction: column;
     }
+    .gmodal.open { display: flex; }
 
-    .gallery-slot svg { width: 28px; height: 28px; opacity: 0.5; }
-
-    .g1 { grid-column: span 5; }
-    .g2 { grid-column: span 4; }
-    .g3 { grid-column: span 3; }
-    .g4 { grid-column: span 3; }
-    .g5 { grid-column: span 6; }
-    .g6 { grid-column: span 3; }
-
-    /* ── PROCESS ── */
-    .process-section {
-      padding: 7rem 5vw;
-      background: var(--card-bg);
-    }
-
-    .process-steps {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 3rem;
-      margin-top: 4rem;
-    }
-
-    .process-step {
-      position: relative;
-    }
-
-    .process-step:not(:last-child)::after {
-      content: '';
-      position: absolute;
-      top: 22px;
-      left: calc(100% - 1.5rem);
-      width: calc(3rem + 1px);
-      height: 1px;
-      background: var(--divider);
-    }
-
-    .step-num {
-      font-family: 'Playfair Display', serif;
-      font-size: 3rem;
-      font-weight: 700;
-      color: rgba(184,147,90,0.15);
-      line-height: 1;
-      margin-bottom: 1rem;
-    }
-
-    .step-title {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.25rem;
-      font-weight: 600;
-      color: var(--cream);
-      margin-bottom: 0.rem;
-    }
-
-    .step-text {
-      font-size: 1.00rem;
-      line-height: 1.7;
-      color: rgba(245,240,232,0.55);
-    }
-
-    /* ── CTA BANNER ── */
-    .cta-banner {
-      padding: 6rem 5vw;
-      display: grid;
-      grid-template-columns: 1fr auto;
-      align-items: center;
-      gap: 3rem;
-      border-top: 1px solid var(--divider);
-      border-bottom: 1px solid var(--divider);
-    }
-
-    .cta-banner h2 {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(1.8rem, 3vw, 2.6rem);
-      font-weight: 700;
-      max-width: 540px;
-      line-height: 1.2;
-    }
-
-    .cta-banner h2 em {
-      font-style: italic;
-      color: var(--bronze);
-    }
-
-    .cta-box {
-      text-align: center;
-      background: var(--card-bg);
-      padding: 2.5rem 3rem;
-      border-radius: 4px;
-      border: 1px solid var(--divider);
-      min-width: 260px;
-    }
-
-    .cta-phone-label {
-      font-size: 1.70rem;
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-      color: var(--bronze);
-      margin-bottom: 0.75rem;
-    }
-
-    .cta-phone {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.9rem;
-      font-weight: 700;
-      color: var(--cream);
-      margin-bottom: 1.25rem;
-      display: block;
-      text-decoration: none;
-      transition: color 0.2s;
-    }
-
-    .cta-phone:hover { color: var(--bronze-light); }
-
-    .cta-note {
-      font-size: 1.5rem;
-      color: rgba(245,240,232,0.45);
-    }
-
-    /* ── FOOTER ── */
-    footer {
-      padding: 2.5rem 5vw;
+    .gmodal-header {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 1rem;
+      padding: 1.25rem 2rem;
+      border-bottom: 1px solid var(--divider);
+      flex-shrink: 0;
     }
-
-    .footer-logo {
+    .gmodal-title {
       font-family: 'Playfair Display', serif;
-      font-size: 1.1rem;
+      font-size: 1.3rem;
       font-weight: 700;
       color: var(--cream);
     }
-
-    .footer-logo span { color: var(--bronze); }
-
-    .footer-copy {
-      font-size: 1.00rem;
-      color: rgba(245,240,232,0.3);
+    .gmodal-title span { color: var(--bronze); font-size: 0.9rem; font-family: 'Inter', sans-serif; font-weight: 400; margin-left: 1rem; opacity: 0.6; }
+    .gmodal-close {
+      background: none; border: none; cursor: pointer;
+      color: rgba(245,240,232,0.5); font-size: 1.6rem; line-height: 1;
+      transition: color 0.2s; padding: 0.25rem 0.5rem;
     }
+    .gmodal-close:hover { color: var(--bronze); }
+
+    .gmodal-body {
+      flex: 1;
+      overflow-y: auto;
+      padding: 1.5rem 2rem 2rem;
+    }
+
+    .modal-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 8px;
+    }
+
+    .mg-item {
+      aspect-ratio: 1;
+      border-radius: 4px;
+      overflow: hidden;
+      cursor: pointer;
+      position: relative;
+      background: var(--card-bg);
+      border: 1px dashed rgba(184,147,90,0.18);
+      transition: transform 0.2s;
+    }
+    .mg-item:hover { transform: scale(1.03); z-index: 2; }
+    .mg-item img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .mg-item .mg-overlay {
+      position: absolute; inset: 0;
+      background: rgba(184,147,90,0.15);
+      opacity: 0; transition: opacity 0.2s;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .mg-item:hover .mg-overlay { opacity: 1; }
+    .mg-overlay-icon { font-size: 1.5rem; }
+
+    .mg-placeholder {
+      width: 100%; height: 100%;
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      gap: 0.4rem; color: rgba(184,147,90,0.3);
+      font-size: 0.65rem; letter-spacing: 0.08em; text-transform: uppercase;
+    }
+    .mg-placeholder svg { width: 22px; height: 22px; opacity: 0.35; }
+
+    /* ── LIGHTBOX ── */
+    .lightbox {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 300;
+      background: rgba(5,4,4,0.98);
+      align-items: center;
+      justify-content: center;
+    }
+    .lightbox.open { display: flex; }
+
+    .lb-close {
+      position: absolute; top: 1.25rem; right: 1.5rem;
+      background: none; border: none; cursor: pointer;
+      color: rgba(245,240,232,0.5); font-size: 1.8rem;
+      transition: color 0.2s; z-index: 10; line-height: 1;
+    }
+    .lb-close:hover { color: var(--bronze); }
+
+    .lb-main {
+      display: flex; align-items: center; gap: 1.5rem;
+      max-width: 95vw; max-height: 95vh;
+    }
+
+    .lb-nav {
+      background: rgba(184,147,90,0.1);
+      border: 1px solid var(--divider);
+      color: var(--cream); font-size: 1.8rem;
+      width: 52px; height: 52px; border-radius: 4px;
+      display: flex; align-items: center; justify-content: center;
+      cursor: pointer; transition: background 0.2s, color 0.2s;
+      flex-shrink: 0;
+    }
+    .lb-nav:hover { background: var(--bronze); color: var(--coal); }
+
+    .lb-img-wrap {
+      max-width: 80vw; max-height: 88vh;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .lb-img-wrap img {
+      max-width: 100%; max-height: 88vh;
+      object-fit: contain; border-radius: 4px;
+      display: block;
+    }
+
+    /* placeholder in lightbox */
+    .lb-placeholder {
+      width: 500px; height: 380px;
+      background: var(--card-bg);
+      border-radius: 4px;
+      border: 1px dashed rgba(184,147,90,0.25);
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      gap: 1rem; color: rgba(184,147,90,0.4);
+      font-size: 0.85rem; letter-spacing: 0.08em;
+    }
+    .lb-placeholder svg { width: 48px; height: 48px; opacity: 0.3; }
+
+    .lb-counter {
+      position: absolute; bottom: 1.5rem; left: 50%;
+      transform: translateX(-50%);
+      font-size: 0.78rem; color: rgba(245,240,232,0.35);
+      letter-spacing: 0.12em;
+    }
+
+    /* ── PROCESS ── */
+    .process-section { padding: 7rem 5vw; background: var(--card-bg); }
+    .process-steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 3rem; margin-top: 4rem; }
+    .process-step { position: relative; }
+    .process-step:not(:last-child)::after { content: ''; position: absolute; top: 22px; left: calc(100% - 1.5rem); width: calc(3rem + 1px); height: 1px; background: var(--divider); }
+    .step-num { font-family: 'Playfair Display', serif; font-size: 3rem; font-weight: 700; color: rgba(184,147,90,0.15); line-height: 1; margin-bottom: 1rem; }
+    .step-title { font-family: 'Playfair Display', serif; font-size: 1.25rem; font-weight: 600; color: var(--cream); margin-bottom: 0.5rem; }
+    .step-text { font-size: 1.00rem; line-height: 1.7; color: rgba(245,240,232,0.55); }
+
+    /* ── CTA BANNER ── */
+    .cta-banner { padding: 6rem 5vw; display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 3rem; border-top: 1px solid var(--divider); border-bottom: 1px solid var(--divider); }
+    .cta-banner h2 { font-family: 'Playfair Display', serif; font-size: clamp(1.8rem, 3vw, 2.6rem); font-weight: 700; max-width: 540px; line-height: 1.2; }
+    .cta-banner h2 em { font-style: italic; color: var(--bronze); }
+    .cta-box { text-align: center; background: var(--card-bg); padding: 2.5rem 3rem; border-radius: 4px; border: 1px solid var(--divider); min-width: 260px; }
+    .cta-phone-label { font-size: 1.70rem; letter-spacing: 0.04em; text-transform: uppercase; color: var(--bronze); margin-bottom: 0.75rem; }
+    .cta-phone { font-family: 'Playfair Display', serif; font-size: 1.9rem; font-weight: 700; color: var(--cream); margin-bottom: 1.25rem; display: block; text-decoration: none; transition: color 0.2s; }
+    .cta-phone:hover { color: var(--bronze-light); }
+    .cta-note { font-size: 1.5rem; color: rgba(245,240,232,0.45); }
+
+    /* ── FOOTER ── */
+    footer { padding: 2.5rem 5vw; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; }
+    .footer-logo { font-family: 'Playfair Display', serif; font-size: 1.1rem; font-weight: 700; color: var(--cream); }
+    .footer-logo span { color: var(--bronze); }
+    .footer-copy { font-size: 1.00rem; color: rgba(245,240,232,0.3); }
 
     /* ── RESPONSIVE ── */
     @media (max-width: 900px) {
-      .hero {
-        grid-template-columns: 1fr;
-        text-align: center;
-        padding-top: 100px;
-        padding-bottom: 4rem;
-      }
-
+      .hero { grid-template-columns: 1fr; text-align: center; padding-top: 100px; padding-bottom: 4rem; }
       .hero::before { display: none; }
-
       .hero-desc { max-width: 100%; }
-
       .hero-actions { justify-content: center; }
-
-      .hero-photo {
-        grid-template-rows: 200px 140px;
-      }
-
+      .hero-photo { grid-template-rows: 200px 140px; }
       nav .nav-links { display: none; }
-
       .features-grid { grid-template-columns: 1fr; }
-
       .process-steps { grid-template-columns: 1fr 1fr; }
-
       .process-step::after { display: none; }
-
-      .gallery-grid {
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: repeat(3, 180px);
-      }
-
-      .g1, .g2, .g3, .g4, .g5, .g6 { grid-column: span 1; }
-
-      .cta-banner {
-        grid-template-columns: 1fr;
-        text-align: center;
-      }
-
+      .preview-grid { grid-template-columns: repeat(3, 1fr); grid-template-rows: repeat(4, 160px); }
+      .modal-grid { grid-template-columns: repeat(3, 1fr); }
+      .cta-banner { grid-template-columns: 1fr; text-align: center; }
       .cta-box { width: 100%; }
-
       .stat-divider { display: none; }
     }
-
     @media (max-width: 600px) {
       .process-steps { grid-template-columns: 1fr; }
+      .preview-grid { grid-template-columns: repeat(2, 1fr); grid-template-rows: repeat(5, 150px); }
+      .modal-grid { grid-template-columns: repeat(2, 1fr); }
+      .lb-img-wrap { max-width: 95vw; }
+      .lb-placeholder { width: 280px; height: 220px; }
     }
   </style>
 </head>
@@ -594,43 +361,28 @@
       <a href="#gallery" class="btn-ghost">ნამუშევრები</a>
     </div>
   </div>
-
   <div class="hero-photo">
-    <div class="photo-slot tall">
-  <img src="სურათი1.jpg" style="width:100%; height:100%; object-fit:cover; border-radius:4px;" />
-</div>
-    <div class="photo-slot">
-      <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
-      თქვენი სურათი
+    <div class="photo-slot tall" onclick="openHeroLightbox(0)">
+      <img src="/ავეჯის ფოტოები/მთავარი 3/147.jpg" style="width:100%; height:100%; object-fit:cover; border-radius:4px;" />
     </div>
-    <div class="photo-slot">
-      <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
-      თქვენი სურათი
+    <div class="photo-slot tall" onclick="openHeroLightbox(1)">
+      <img src="/ავეჯის ფოტოები/მთავარი 3/251.jpg" style="width:100%; height:100%; object-fit:cover; border-radius:4px;" />
+    </div>
+    <div class="photo-slot tall" onclick="openHeroLightbox(2)">
+      <img src="/ავეჯის ფოტოები/მთავარი 3/36.jpg" style="width:100%; height:100%; object-fit:cover; border-radius:4px;" />
     </div>
   </div>
 </section>
 
 <!-- STATS BAR -->
 <div class="stats-bar">
-  <div class="stat-item">
-    <div class="stat-number">30+</div>
-    <div class="stat-label">წლის გამოცდილება</div>
-  </div>
+  <div class="stat-item"><div class="stat-number">30+</div><div class="stat-label">წლის გამოცდილება</div></div>
   <div class="stat-divider"></div>
-  <div class="stat-item">
-    <div class="stat-number">500+</div>
-    <div class="stat-label">კმაყოფილი კლიენტი</div>
-  </div>
+  <div class="stat-item"><div class="stat-number">500+</div><div class="stat-label">კმაყოფილი კლიენტი</div></div>
   <div class="stat-divider"></div>
-  <div class="stat-item">
-    <div class="stat-number">100%</div>
-    <div class="stat-label">ინდივიდუალური მიდგომა</div>
-  </div>
+  <div class="stat-item"><div class="stat-number">100%</div><div class="stat-label">ინდივიდუალური მიდგომა</div></div>
   <div class="stat-divider"></div>
-  <div class="stat-item">
-    <div class="stat-number">★ 4.9</div>
-    <div class="stat-label">კლიენტთა შეფასება</div>
-  </div>
+  <div class="stat-item"><div class="stat-number">★ 4.9</div><div class="stat-label">კლიენტთა შეფასება</div></div>
 </div>
 
 <!-- FEATURES -->
@@ -641,34 +393,21 @@
       <h2 class="section-title">სამი მიზეზი, რატომ<br/>გვირჩევენ ჩვენ</h2>
     </div>
   </div>
-
   <div class="features-grid">
     <div class="feature-card">
       <div class="feature-icon">💰</div>
       <h3>ხელმისაწვდომი ფასი</h3>
-      <p>
-        ჩვენ გვჯერა, რომ ხარისხიანი ავეჯი ყველასთვის უნდა იყოს ხელმისაწვდომი.
-        გთავაზობთ ბაზარზე ყველაზე კონკურენტუნარიან ფასებს — ყოველგვარი კომპრომისის
-        გარეშე ხარისხთან.
-      </p>
+      <p>ჩვენ გვჯერა, რომ ხარისხიანი ავეჯი ყველასთვის უნდა იყოს ხელმისაწვდომი. გთავაზობთ ბაზარზე ყველაზე კონკურენტუნარიან ფასებს — ყოველგვარი კომპრომისის გარეშე ხარისხთან.</p>
     </div>
     <div class="feature-card">
       <div class="feature-icon">🏆</div>
       <h3>30+ წლის ოსტატობა</h3>
-      <p>
-        წლების გამოცდილება ნიშნავს, რომ ჩვენ ვიცით ხის ყოველი ნიუანსი — სწორი
-        მასალის შერჩევიდან დაწყებული, სრულყოფილ ფინიშამდე. ყოველი ნამუშევარი
-        ატარებს ხელოსნის ინდივიდუალურ ხელწერას.
-      </p>
+      <p>წლების გამოცდილება ნიშნავს, რომ ჩვენ ვიცით ხის ყოველი ნიუანსი — სწორი მასალის შერჩევიდან დაწყებული, სრულყოფილ ფინიშამდე. ყოველი ნამუშევარი ატარებს ხელოსნის ინდივიდუალურ ხელწერას.</p>
     </div>
     <div class="feature-card">
       <div class="feature-icon">🎯</div>
       <h3>შენი იდეები — ჩვენი შესრულება</h3>
-      <p>
-        სამზარეულო, საძინებელი, სამუშაო კუთხე — ნებისმიერი სივრცე, ნებისმიერი სტილი.
-        ჩვენ ვქმნით ზუსტად იმ ავეჯს, რომელსაც თქვენ იოცნებებდით, ნებისმიერი ზომით
-        და დიზაინით თქვენთვის და თქვენი კომფორტისთვის.
-      </p>
+      <p>სამზარეულო, საძინებელი, სამუშაო კუთხე — ნებისმიერი სივრცე, ნებისმიერი სტილი. ჩვენ ვქმნით ზუსტად იმ ავეჯს, რომელსაც თქვენ იოცნებებდით, ნებისმიერი ზომით და დიზაინით.</p>
     </div>
   </div>
 </section>
@@ -682,33 +421,701 @@
     </div>
   </div>
 
-  <div class="gallery-grid">
-    <div class="gallery-slot g1">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
-      სურათი
+  <!-- 9 preview + 1 "show more" tile -->
+  <div class="preview-grid">
+    <div class="pv-item" onclick="openModalAt(0)">
+      <div class="pv-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg></div>
     </div>
-    <div class="gallery-slot g2">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
-      სურათი
+    <div class="pv-item" onclick="openModalAt(1)">
+      <div class="pv-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg></div>
     </div>
-    <div class="gallery-slot g3">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
-      სურათი
+    <div class="pv-item" onclick="openModalAt(2)">
+      <div class="pv-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg></div>
     </div>
-    <div class="gallery-slot g4">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
-      სურათი
+    <div class="pv-item" onclick="openModalAt(3)">
+      <div class="pv-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg></div>
     </div>
-    <div class="gallery-slot g5">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
-      სურათი
+    <div class="pv-item" onclick="openModalAt(4)">
+      <div class="pv-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg></div>
     </div>
-    <div class="gallery-slot g6">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
-      სურათი
+    <div class="pv-item" onclick="openModalAt(5)">
+      <div class="pv-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg></div>
+    </div>
+    <div class="pv-item" onclick="openModalAt(6)">
+      <div class="pv-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg></div>
+    </div>
+    <div class="pv-item" onclick="openModalAt(7)">
+      <div class="pv-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg></div>
+    </div>
+    <div class="pv-item" onclick="openModalAt(8)">
+      <div class="pv-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg></div>
+    </div>
+    <!-- 10th tile: show more -->
+    <div class="pv-more" onclick="openModal()">
+      <div class="pv-more-num">+200</div>
+      <div class="pv-more-label">ფოტოს სანახავად</div>
+      <div class="pv-more-label" style="opacity:0.5;font-size:0.65rem;">დააჭირეთ აქ</div>
     </div>
   </div>
 </section>
+
+<!-- GALLERY MODAL -->
+<div class="gmodal" id="gmodal">
+  <div class="gmodal-header">
+    <div class="gmodal-title">ჩვენი პორტფოლიო <span>210 ნამუშევარი</span></div>
+    <button class="gmodal-close" onclick="closeModal()">✕</button>
+  </div>
+  <div class="gmodal-body">
+    <div class="modal-grid">
+      <div class="mg-item" onclick="openLightbox(0)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 1</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(1)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 2</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(2)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 3</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(3)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 4</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(4)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 5</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(5)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 6</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(6)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 7</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(7)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 8</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(8)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 9</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(9)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 10</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(10)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 11</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(11)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 12</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(12)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 13</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(13)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 14</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(14)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 15</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(15)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 16</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(16)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 17</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(17)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 18</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(18)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 19</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(19)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 20</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(20)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 21</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(21)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 22</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(22)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 23</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(23)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 24</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(24)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 25</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(25)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 26</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(26)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 27</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(27)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 28</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(28)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 29</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(29)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 30</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(30)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 31</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(31)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 32</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(32)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 33</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(33)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 34</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(34)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 35</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(35)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 36</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(36)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 37</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(37)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 38</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(38)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 39</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(39)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 40</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(40)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 41</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(41)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 42</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(42)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 43</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(43)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 44</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(44)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 45</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(45)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 46</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(46)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 47</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(47)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 48</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(48)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 49</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(49)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 50</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(50)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 51</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(51)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 52</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(52)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 53</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(53)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 54</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(54)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 55</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(55)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 56</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(56)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 57</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(57)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 58</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(58)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 59</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(59)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 60</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(60)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 61</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(61)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 62</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(62)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 63</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(63)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 64</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(64)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 65</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(65)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 66</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(66)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 67</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(67)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 68</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(68)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 69</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(69)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 70</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(70)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 71</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(71)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 72</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(72)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 73</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(73)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 74</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(74)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 75</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(75)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 76</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(76)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 77</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(77)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 78</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(78)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 79</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(79)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 80</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(80)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 81</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(81)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 82</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(82)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 83</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(83)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 84</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(84)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 85</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(85)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 86</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(86)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 87</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(87)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 88</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(88)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 89</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(89)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 90</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(90)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 91</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(91)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 92</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(92)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 93</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(93)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 94</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(94)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 95</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(95)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 96</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(96)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 97</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(97)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 98</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(98)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 99</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(99)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 100</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(100)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 101</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(101)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 102</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(102)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 103</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(103)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 104</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(104)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 105</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(105)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 106</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(106)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 107</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(107)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 108</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(108)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 109</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(109)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 110</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(110)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 111</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(111)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 112</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(112)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 113</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(113)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 114</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(114)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 115</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(115)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 116</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(116)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 117</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(117)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 118</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(118)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 119</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(119)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 120</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(120)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 121</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(121)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 122</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(122)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 123</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(123)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 124</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(124)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 125</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(125)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 126</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(126)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 127</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(127)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 128</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(128)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 129</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(129)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 130</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(130)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 131</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(131)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 132</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(132)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 133</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(133)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 134</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(134)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 135</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(135)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 136</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(136)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 137</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(137)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 138</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(138)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 139</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(139)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 140</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(140)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 141</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(141)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 142</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(142)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 143</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(143)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 144</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(144)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 145</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(145)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 146</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(146)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 147</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(147)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 148</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(148)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 149</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(149)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 150</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(150)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 151</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(151)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 152</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(152)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 153</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(153)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 154</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(154)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 155</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(155)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 156</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(156)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 157</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(157)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 158</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(158)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 159</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(159)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 160</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(160)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 161</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(161)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 162</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(162)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 163</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(163)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 164</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(164)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 165</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(165)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 166</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(166)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 167</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(167)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 168</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(168)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 169</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(169)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 170</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(170)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 171</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(171)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 172</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(172)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 173</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(173)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 174</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(174)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 175</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(175)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 176</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(176)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 177</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(177)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 178</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(178)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 179</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(179)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 180</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(180)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 181</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(181)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 182</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(182)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 183</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(183)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 184</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(184)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 185</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(185)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 186</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(186)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 187</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(187)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 188</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(188)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 189</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(189)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 190</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(190)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 191</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(191)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 192</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(192)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 193</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(193)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 194</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(194)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 195</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(195)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 196</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(196)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 197</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(197)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 198</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(198)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 199</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(199)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 200</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(200)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 201</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(201)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 202</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(202)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 203</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(203)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 204</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(204)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 205</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(205)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 206</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(206)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 207</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(207)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 208</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(208)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 209</span></div>
+      </div>
+      <div class="mg-item" onclick="openLightbox(209)">
+        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 210</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox">
+  <button class="lb-close" onclick="closeLightbox()">✕</button>
+  <div class="lb-main">
+    <button class="lb-nav" onclick="lbPrev()">&#8249;</button>
+    <div class="lb-img-wrap" id="lb-content">
+      <div class="lb-placeholder">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+        სურათი
+      </div>
+    </div>
+    <button class="lb-nav" onclick="lbNext()">&#8250;</button>
+  </div>
+  <div class="lb-counter" id="lb-counter">1 / 210</div>
+</div>
 
 <!-- PROCESS -->
 <section class="process-section" id="process">
@@ -718,7 +1125,6 @@
       <h2 class="section-title">მარტივი გზა<br/>სრულყოფილ ავეჯამდე</h2>
     </div>
   </div>
-
   <div class="process-steps">
     <div class="process-step">
       <div class="step-num">01</div>
@@ -733,7 +1139,7 @@
     <div class="process-step">
       <div class="step-num">03</div>
       <div class="step-title">წარმოება</div>
-      <p class="step-text">გამოცდილი ოსტატი, რომელიც ქმნის ხელოვნების ნიმუშს ავეჯის სახით,მხოლოდ თქვენთვის და უმაღლესი ხარისხის მასალებით.</p>
+      <p class="step-text">გამოცდილი ოსტატი ქმნის ხელოვნების ნიმუშს ავეჯის სახით, მხოლოდ თქვენთვის და უმაღლესი ხარისხის მასალებით.</p>
     </div>
     <div class="process-step">
       <div class="step-num">04</div>
@@ -750,7 +1156,7 @@
   </div>
   <div class="cta-box">
     <div class="cta-phone-label">დაგვირეკეთ ახლავე</div>
-    <a href="tel:+995574044343" class="cta-phone">574 04 43 43<br>568 84 55 50 </a>
+    <a href="tel:+995574044343" class="cta-phone">574 04 43 43<br>568 84 55 50</a>
     <div class="cta-note">ორშ–შაბ &nbsp;|&nbsp; 10:00 – 19:00</div>
     <br/>
     <a href="tel:+995574044343" class="btn-primary" style="width:100%;text-align:center;display:block;">დარეკვა</a>
@@ -762,6 +1168,295 @@
   <div class="footer-logo">ავეჯის<span> ოსტატი</span></div>
   <div class="footer-copy">© 2026 · ყველა უფლება დაცულია</div>
 </footer>
+
+<script>
+  // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  // ფოტოების სია — შეცვალეთ src-ები თქვენით
+  // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  const PHOTOS = [
+
+    "/ავეჯის ფოტოები/მთავარი 3/147.jpg",
+    "/ავეჯის ფოტოები/მთავარი 3/251.jpg",
+    "/ავეჯის ფოტოები/მთავარი 3/36.jpg",
+    "/ავეჯის ფოტოები/2.jpg",
+    "/ავეჯის ფოტოები/7.jpg",
+    "/ავეჯის ფოტოები/15.jpg",
+    "/ავეჯის ფოტოები/22.jpg",
+    "/ავეჯის ფოტოები/23.jpg",
+    "/ავეჯის ფოტოები/24.jpg",
+    "/ავეჯის ფოტოები/30.jpg",
+    "/ავეჯის ფოტოები/32.jpg",
+    "/ავეჯის ფოტოები/33.jpg",
+    "/ავეჯის ფოტოები/38.jpg",
+    "/ავეჯის ფოტოები/39.jpg",
+    "/ავეჯის ფოტოები/40.jpg",
+    "/ავეჯის ფოტოები/41.jpg",
+    "/ავეჯის ფოტოები/42.jpg",
+    "/ავეჯის ფოტოები/43.jpg",
+    "/ავეჯის ფოტოები/46.jpg", 
+    "/ავეჯის ფოტოები/49.jpg",
+    "/ავეჯის ფოტოები/50.jpg",
+    "/ავეჯის ფოტოები/51.jpg",
+    "/ავეჯის ფოტოები/52.jpg",
+    "/ავეჯის ფოტოები/53.jpg",
+    "/ავეჯის ფოტოები/54.jpg",
+    "/ავეჯის ფოტოები/56.jpg",
+    "/ავეჯის ფოტოები/57.jpg",
+    "/ავეჯის ფოტოები/58.jpg",
+    "/ავეჯის ფოტოები/59.jpg",
+    "/ავეჯის ფოტოები/60.jpg",
+    "/ავეჯის ფოტოები/61.jpg",
+    "/ავეჯის ფოტოები/62.jpg",
+    "/ავეჯის ფოტოები/63.jpg",
+    "/ავეჯის ფოტოები/76.jpg",
+    "/ავეჯის ფოტოები/79.jpg",
+    "/ავეჯის ფოტოები/80.jpg",
+    "/ავეჯის ფოტოები/81.jpg",
+    "/ავეჯის ფოტოები/82.jpg",
+    "/ავეჯის ფოტოები/83.jpg",
+    "/ავეჯის ფოტოები/84.jpg",
+    "/ავეჯის ფოტოები/85.jpg",
+    "/ავეჯის ფოტოები/86.jpg",
+    "/ავეჯის ფოტოები/87.jpg",
+    "/ავეჯის ფოტოები/88.jpg",
+    "/ავეჯის ფოტოები/89.jpg",
+    "/ავეჯის ფოტოები/90.jpg",
+    "/ავეჯის ფოტოები/91.jpg",
+    "/ავეჯის ფოტოები/92.jpg",
+    "/ავეჯის ფოტოები/93.jpg",
+    "/ავეჯის ფოტოები/94.jpg",
+    "/ავეჯის ფოტოები/95.jpg",
+    "/ავეჯის ფოტოები/96.jpg",
+    "/ავეჯის ფოტოები/97.jpg",
+    "/ავეჯის ფოტოები/98.jpg",
+    "/ავეჯის ფოტოები/99.jpg",
+    "/ავეჯის ფოტოები/100.jpg",
+    "/ავეჯის ფოტოები/101.jpg",
+    "/ავეჯის ფოტოები/102.jpg",
+    "/ავეჯის ფოტოები/103.jpg",
+    "/ავეჯის ფოტოები/104.jpg",
+    "/ავეჯის ფოტოები/105.jpg",
+    "/ავეჯის ფოტოები/106.jpg",
+    "/ავეჯის ფოტოები/107.jpg",
+    "/ავეჯის ფოტოები/108.jpg",
+    "/ავეჯის ფოტოები/109.jpg",
+    "/ავეჯის ფოტოები/110.jpg",
+    "/ავეჯის ფოტოები/111.jpg",
+    "/ავეჯის ფოტოები/112.jpg",
+    "/ავეჯის ფოტოები/113.jpg",
+    "/ავეჯის ფოტოები/114.jpg",
+    "/ავეჯის ფოტოები/115.jpg",
+    "/ავეჯის ფოტოები/116.jpg",
+    "/ავეჯის ფოტოები/118.jpg",
+    "/ავეჯის ფოტოები/119.jpg",
+    "/ავეჯის ფოტოები/120.jpg",
+    "/ავეჯის ფოტოები/121.jpg",
+    "/ავეჯის ფოტოები/122.jpg",
+    "/ავეჯის ფოტოები/123.jpg",
+    "/ავეჯის ფოტოები/124.jpg",
+    "/ავეჯის ფოტოები/125.jpg",
+    "/ავეჯის ფოტოები/126.jpg",
+    "/ავეჯის ფოტოები/127.jpg",
+    "/ავეჯის ფოტოები/128.jpg",
+    "/ავეჯის ფოტოები/129.jpg",
+    "/ავეჯის ფოტოები/130.jpg",
+    "/ავეჯის ფოტოები/131.jpg",
+    "/ავეჯის ფოტოები/132.jpg",
+    "/ავეჯის ფოტოები/133.jpg",
+    "/ავეჯის ფოტოები/134.jpg",
+    "/ავეჯის ფოტოები/135.jpg",
+    "/ავეჯის ფოტოები/136.jpg",
+    "/ავეჯის ფოტოები/137.jpg",
+    "/ავეჯის ფოტოები/138.jpg",
+    "/ავეჯის ფოტოები/139.jpg",
+    "/ავეჯის ფოტოები/140.jpg",
+    "/ავეჯის ფოტოები/141.jpg",
+    "/ავეჯის ფოტოები/142.jpg",
+    "/ავეჯის ფოტოები/143.jpg",
+    "/ავეჯის ფოტოები/144.jpg",
+    "/ავეჯის ფოტოები/145.jpg",
+    "/ავეჯის ფოტოები/146.jpg",
+    "/ავეჯის ფოტოები/148.jpg",
+    "/ავეჯის ფოტოები/149.jpg",
+    "/ავეჯის ფოტოები/150.jpg",
+    "/ავეჯის ფოტოები/151.jpg",
+    "/ავეჯის ფოტოები/152.jpg",
+    "/ავეჯის ფოტოები/153.jpg",
+    "/ავეჯის ფოტოები/154.jpg",
+    "/ავეჯის ფოტოები/155.jpg",
+    "/ავეჯის ფოტოები/156.jpg",
+    "/ავეჯის ფოტოები/157.jpg",
+    "/ავეჯის ფოტოები/158.jpg",
+    "/ავეჯის ფოტოები/159.jpg",
+    "/ავეჯის ფოტოები/160.jpg",
+    "/ავეჯის ფოტოები/161.jpg",
+    "/ავეჯის ფოტოები/162.jpg",
+    "/ავეჯის ფოტოები/163.jpg",
+    "/ავეჯის ფოტოები/164.jpg",
+    "/ავეჯის ფოტოები/165.jpg",
+    "/ავეჯის ფოტოები/166.jpg",
+    "/ავეჯის ფოტოები/167.jpg",
+    "/ავეჯის ფოტოები/168.jpg",
+    "/ავეჯის ფოტოები/169.jpg",
+    "/ავეჯის ფოტოები/170.jpg",
+    "/ავეჯის ფოტოები/171.jpg",
+    "/ავეჯის ფოტოები/172.jpg",
+    "/ავეჯის ფოტოები/173.jpg",
+    "/ავეჯის ფოტოები/174.jpg",
+    "/ავეჯის ფოტოები/175.jpg",
+    "/ავეჯის ფოტოები/176.jpg",
+    "/ავეჯის ფოტოები/177.jpg",
+    "/ავეჯის ფოტოები/178.jpg",
+    "/ავეჯის ფოტოები/179.jpg",
+    "/ავეჯის ფოტოები/180.jpg",
+    "/ავეჯის ფოტოები/181.jpg",
+    "/ავეჯის ფოტოები/182.jpg",
+    "/ავეჯის ფოტოები/183.jpg",
+    "/ავეჯის ფოტოები/184.jpg",
+    "/ავეჯის ფოტოები/185.jpg",
+    "/ავეჯის ფოტოები/186.jpg",
+    "/ავეჯის ფოტოები/187.jpg",
+    "/ავეჯის ფოტოები/190.jpg",
+    "/ავეჯის ფოტოები/191.jpg",
+    "/ავეჯის ფოტოები/192.jpg",
+    "/ავეჯის ფოტოები/193.jpg",
+    "/ავეჯის ფოტოები/194.jpg",
+    "/ავეჯის ფოტოები/195.jpg",
+    "/ავეჯის ფოტოები/196.jpg",
+    "/ავეჯის ფოტოები/197.jpg",
+    "/ავეჯის ფოტოები/198.jpg",
+    "/ავეჯის ფოტოები/199.jpg",
+    "/ავეჯის ფოტოები/200.jpg",
+  ];
+
+  const TOTAL = 210; // მთლიანი რაოდენობა
+
+  // ── Preview grid სურათები (პირველი 9) ──
+  document.querySelectorAll('.pv-item').forEach((el, i) => {
+    if (PHOTOS[i]) {
+      el.innerHTML = `<img src="${PHOTOS[i]}" alt="ნამუშევარი" loading="lazy" />`;
+    }
+  });
+
+  // ── Modal grid სურათები ──
+  document.querySelectorAll('.mg-item').forEach((el, i) => {
+    if (PHOTOS[i]) {
+      el.innerHTML = `<img src="${PHOTOS[i]}" alt="ნამუშევარი" loading="lazy" /><div class="mg-overlay"><span class="mg-overlay-icon">⤢</span></div>`;
+    }
+  });
+
+  // ── Modal ──
+  const gmodal = document.getElementById('gmodal');
+
+  function openModal() {
+    gmodal.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function openModalAt(index) {
+    openModal();
+    setTimeout(() => openLightbox(index), 50);
+  }
+
+  function closeModal() {
+    gmodal.classList.remove('open');
+    if (!document.getElementById('lightbox').classList.contains('open')) {
+      document.body.style.overflow = '';
+    }
+  }
+
+  // ── Lightbox ──
+  let lbIndex = 0;
+  const lightbox = document.getElementById('lightbox');
+  const lbContent = document.getElementById('lb-content');
+  const lbCounter = document.getElementById('lb-counter');
+
+  function openLightbox(index) {
+    lbIndex = index;
+    renderLb();
+    lightbox.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeLightbox() {
+    lightbox.classList.remove('open');
+    if (!gmodal.classList.contains('open')) {
+      document.body.style.overflow = '';
+    }
+  }
+
+  function renderLb() {
+    const src = PHOTOS[lbIndex];
+    if (src) {
+      lbContent.innerHTML = `<img src="${src}" alt="ნამუშევარი ${lbIndex+1}" />`;
+    } else {
+      lbContent.innerHTML = `<div class="lb-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>სურათი ${lbIndex+1}</div>`;
+    }
+    lbCounter.textContent = `${lbIndex+1} / ${TOTAL}`;
+  }
+
+  function lbPrev() { lbIndex = (lbIndex - 1 + TOTAL) % TOTAL; renderLb(); }
+  function lbNext() { lbIndex = (lbIndex + 1) % TOTAL; renderLb(); }
+
+  // ── Hero ფოტოების lightbox ──
+  const HERO_PHOTOS = [
+    "/ავეჯის ფოტოები/მთავარი 3/147.jpg",
+    "/ავეჯის ფოტოები/მთავარი 3/251.jpg",
+    "/ავეჯის ფოტოები/მთავარი 3/36.jpg",
+  ];
+
+  function openHeroLightbox(index) {
+    // hero ფოტოებს ვაჩვენებთ იმავე lightbox-ში, დამოუკიდებლად
+    lbIndex = index;
+    // დროებით PHOTOS-ს ვცვლით hero ფოტოებით
+    _heroMode = true;
+    renderLbHero();
+    lightbox.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  let _heroMode = false;
+
+  function renderLbHero() {
+    const src = HERO_PHOTOS[lbIndex];
+    lbContent.innerHTML = src
+      ? `<img src="${src}" alt="ნამუშევარი" />`
+      : `<div class="lb-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg></div>`;
+    lbCounter.textContent = `${lbIndex + 1} / ${HERO_PHOTOS.length}`;
+  }
+
+  // override lbPrev/lbNext to handle hero mode
+  function lbPrev() {
+    if (_heroMode) { lbIndex = (lbIndex - 1 + HERO_PHOTOS.length) % HERO_PHOTOS.length; renderLbHero(); }
+    else { lbIndex = (lbIndex - 1 + TOTAL) % TOTAL; renderLb(); }
+  }
+  function lbNext() {
+    if (_heroMode) { lbIndex = (lbIndex + 1) % HERO_PHOTOS.length; renderLbHero(); }
+    else { lbIndex = (lbIndex + 1) % TOTAL; renderLb(); }
+  }
+
+  // reset hero mode on close
+  const _origCloseLightbox = closeLightbox;
+  function closeLightbox() {
+    _heroMode = false;
+    lightbox.classList.remove('open');
+    if (!gmodal.classList.contains('open')) document.body.style.overflow = '';
+  }
+  document.addEventListener('keydown', e => {
+    if (lightbox.classList.contains('open')) {
+      if (e.key === 'ArrowLeft') lbPrev();
+      if (e.key === 'ArrowRight') lbNext();
+      if (e.key === 'Escape') closeLightbox();
+    } else if (gmodal.classList.contains('open')) {
+      if (e.key === 'Escape') closeModal();
+    }
+  });
+
+  // click outside lightbox image
+  lightbox.addEventListener('click', e => {
+    if (e.target === lightbox) closeLightbox();
+  });
+</script>
 
 </body>
 </html>
