@@ -60,7 +60,7 @@
     .stats-bar { background: var(--bronze); padding: 2rem 5vw; display: flex; align-items: center; justify-content: space-around; gap: 2rem; flex-wrap: wrap; }
     .stat-item { text-align: center; color: var(--coal); }
     .stat-number { font-family: 'Playfair Display', serif; font-size: 2.5rem; font-weight: 700; line-height: 1; margin-bottom: 0.3rem; }
-    .stat-label { font-size: 0.8rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; opacity: 0.75; }
+    .stat-label { font-size: 1.50rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; opacity: 0.75; }
     .stat-divider { width: 1px; height: 50px; background: rgba(28,26,23,0.2); }
 
     /* ── FEATURES ── */
@@ -111,7 +111,6 @@
     }
     .pv-placeholder svg { width: 26px; height: 26px; opacity: 0.4; }
 
-    /* 10th tile — "show more" */
     .pv-more {
       border-radius: 6px;
       overflow: hidden;
@@ -263,7 +262,6 @@
       display: block;
     }
 
-    /* placeholder in lightbox */
     .lb-placeholder {
       width: 500px; height: 380px;
       background: var(--card-bg);
@@ -363,13 +361,13 @@
   </div>
   <div class="hero-photo">
     <div class="photo-slot tall" onclick="openHeroLightbox(0)">
-      <img src="/avejis-photoebi/mtavari-3/147.jpg" style="width:100%; height:100%; object-fit:cover; border-radius:4px;" />
+      <img src="/-/avejis-photoebi/mtavari-3/147.jpg" style="width:100%; height:100%; object-fit:cover; border-radius:4px;" />
     </div>
     <div class="photo-slot tall" onclick="openHeroLightbox(1)">
-      <img src="/avejis-photoebi/mtavari-3/251.jpg" style="width:100%; height:100%; object-fit:cover; border-radius:4px;" />
+      <img src="/-/avejis-photoebi/mtavari-3/251.jpg" style="width:100%; height:100%; object-fit:cover; border-radius:4px;" />
     </div>
     <div class="photo-slot tall" onclick="openHeroLightbox(2)">
-      <img src="/avejis-photoebi/mtavari-3/36.jpg" style="width:100%; height:100%; object-fit:cover; border-radius:4px;" />
+      <img src="/-/avejis-photoebi/mtavari-3/36.jpg" style="width:100%; height:100%; object-fit:cover; border-radius:4px;" />
     </div>
   </div>
 </section>
@@ -401,7 +399,7 @@
     </div>
     <div class="feature-card">
       <div class="feature-icon">🏆</div>
-      <h3>30+ წლის ოსტატობა</h3>
+      <h3>30+ წლის გამოცდილება</h3>
       <p>წლების გამოცდილება ნიშნავს, რომ ჩვენ ვიცით ხის ყოველი ნიუანსი — სწორი მასალის შერჩევიდან დაწყებული, სრულყოფილ ფინიშამდე. ყოველი ნამუშევარი ატარებს ხელოსნის ინდივიდუალურ ხელწერას.</p>
     </div>
     <div class="feature-card">
@@ -421,7 +419,6 @@
     </div>
   </div>
 
-  <!-- 9 preview + 1 "show more" tile -->
   <div class="preview-grid">
     <div class="pv-item" onclick="openModalAt(0)">
       <div class="pv-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg></div>
@@ -450,7 +447,6 @@
     <div class="pv-item" onclick="openModalAt(8)">
       <div class="pv-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg></div>
     </div>
-    <!-- 10th tile: show more -->
     <div class="pv-more" onclick="openModal()">
       <div class="pv-more-num">+143</div>
       <div class="pv-more-label" style="font-size: 0.95rem;">ფოტოს სანახავად</div>
@@ -466,464 +462,7 @@
     <button class="gmodal-close" onclick="closeModal()">✕</button>
   </div>
   <div class="gmodal-body">
-    <div class="modal-grid">
-      <div class="mg-item" onclick="openLightbox(0)">
-        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 1</span></div>
-      </div>
-      <div class="mg-item" onclick="openLightbox(1)">
-        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 2</span></div>
-      </div>
-      <div class="mg-item" onclick="openLightbox(2)">
-        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 3</span></div>
-      </div>
-      <div class="mg-item" onclick="openLightbox(3)">
-        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 4</span></div>
-      </div>
-      <div class="mg-item" onclick="openLightbox(4)">
-        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 5</span></div>
-      </div>
-      <div class="mg-item" onclick="openLightbox(5)">
-        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 6</span></div>
-      </div>
-      <div class="mg-item" onclick="openLightbox(6)">
-        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 7</span></div>
-      </div>
-      <div class="mg-item" onclick="openLightbox(7)">
-        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 8</span></div>
-      </div>
-      <div class="mg-item" onclick="openLightbox(8)">
-        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 9</span></div>
-      </div>
-      <div class="mg-item" onclick="openLightbox(9)">
-        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 10</span></div>
-      </div>
-      <div class="mg-item" onclick="openLightbox(10)">
-        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 11</span></div>
-      </div>
-      <div class="mg-item" onclick="openLightbox(11)">
-        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 12</span></div>
-      </div>
-      <div class="mg-item" onclick="openLightbox(12)">
-        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 13</span></div>
-      </div>
-      <div class="mg-item" onclick="openLightbox(13)">
-        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 14</span></div>
-      </div>
-      <div class="mg-item" onclick="openLightbox(14)">
-        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 15</span></div>
-      </div>
-      <div class="mg-item" onclick="openLightbox(15)">
-        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 16</span></div>
-      </div>
-      <div class="mg-item" onclick="openLightbox(16)">
-        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 17</span></div>
-      </div>
-      <div class="mg-item" onclick="openLightbox(17)">
-        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 18</span></div>
-      </div>
-      <div class="mg-item" onclick="openLightbox(18)">
-        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 19</span></div>
-      </div>
-      <div class="mg-item" onclick="openLightbox(19)">
-        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 20</span></div>
-      </div>
-      <div class="mg-item" onclick="openLightbox(20)">
-        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 21</span></div>
-      </div>
-      <div class="mg-item" onclick="openLightbox(21)">
-        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 22</span></div>
-      </div>
-      <div class="mg-item" onclick="openLightbox(22)">
-        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 23</span></div>
-      </div>
-      <div class="mg-item" onclick="openLightbox(23)">
-        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 24</span></div>
-      </div>
-      <div class="mg-item" onclick="openLightbox(24)">
-        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 25</span></div>
-      </div>
-      <div class="mg-item" onclick="openLightbox(25)">
-        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 26</span></div>
-      </div>
-      <div class="mg-item" onclick="openLightbox(26)">
-        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 27</span></div>
-      </div>
-      <div class="mg-item" onclick="openLightbox(27)">
-        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 28</span></div>
-      </div>
-      <div class="mg-item" onclick="openLightbox(28)">
-        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 29</span></div>
-      </div>
-      <div class="mg-item" onclick="openLightbox(29)">
-        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 30</span></div>
-      </div>
-      <div class="mg-item" onclick="openLightbox(30)">
-        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 31</span></div>
-      </div>
-      <div class="mg-item" onclick="openLightbox(31)">
-        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 32</span></div>
-      </div>
-      <div class="mg-item" onclick="openLightbox(32)">
-        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 33</span></div>
-      </div>
-      <div class="mg-item" onclick="openLightbox(33)">
-        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 34</span></div>
-      </div>
-      <div class="mg-item" onclick="openLightbox(34)">
-        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 35</span></div>
-      </div>
-      <div class="mg-item" onclick="openLightbox(35)">
-        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 36</span></div>
-      </div>
-      <div class="mg-item" onclick="openLightbox(36)">
-        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 37</span></div>
-      </div>
-      <div class="mg-item" onclick="openLightbox(37)">
-        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 38</span></div>
-      </div>
-      <div class="mg-item" onclick="openLightbox(38)">
-        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 39</span></div>
-      </div>
-      <div class="mg-item" onclick="openLightbox(39)">
-        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 40</span></div>
-      </div>
-      <div class="mg-item" onclick="openLightbox(40)">
-        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 41</span></div>
-      </div>
-      <div class="mg-item" onclick="openLightbox(41)">
-        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 42</span></div>
-      </div>
-      <div class="mg-item" onclick="openLightbox(42)">
-        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 43</span></div>
-      </div>
-      <div class="mg-item" onclick="openLightbox(43)">
-        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 44</span></div>
-      </div>
-      <div class="mg-item" onclick="openLightbox(44)">
-        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 45</span></div>
-      </div>
-      <div class="mg-item" onclick="openLightbox(45)">
-        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 46</span></div>
-      </div>
-      <div class="mg-item" onclick="openLightbox(46)">
-        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 47</span></div>
-      </div>
-      <div class="mg-item" onclick="openLightbox(47)">
-        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 48</span></div>
-      </div>
-      <div class="mg-item" onclick="openLightbox(48)">
-        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 49</span></div>
-      </div>
-      <div class="mg-item" onclick="openLightbox(49)">
-        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 50</span></div>
-      </div>
-      <div class="mg-item" onclick="openLightbox(50)">
-        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 51</span></div>
-      </div>
-      <div class="mg-item" onclick="openLightbox(51)">
-        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 52</span></div>
-      </div>
-      <div class="mg-item" onclick="openLightbox(52)">
-        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 53</span></div>
-      </div>
-      <div class="mg-item" onclick="openLightbox(53)">
-        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 54</span></div>
-      </div>
-      <div class="mg-item" onclick="openLightbox(54)">
-        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 55</span></div>
-      </div>
-      <div class="mg-item" onclick="openLightbox(55)">
-        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 56</span></div>
-      </div>
-      <div class="mg-item" onclick="openLightbox(56)">
-        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 57</span></div>
-      </div>
-      <div class="mg-item" onclick="openLightbox(57)">
-        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 58</span></div>
-      </div>
-      <div class="mg-item" onclick="openLightbox(58)">
-        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 59</span></div>
-      </div>
-      <div class="mg-item" onclick="openLightbox(59)">
-        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 60</span></div>
-      </div>
-      <div class="mg-item" onclick="openLightbox(60)">
-        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 61</span></div>
-      </div>
-      <div class="mg-item" onclick="openLightbox(61)">
-        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 62</span></div>
-      </div>
-      <div class="mg-item" onclick="openLightbox(62)">
-        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 63</span></div>
-      </div>
-      <div class="mg-item" onclick="openLightbox(63)">
-        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 64</span></div>
-      </div>
-      <div class="mg-item" onclick="openLightbox(64)">
-        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 65</span></div>
-      </div>
-      <div class="mg-item" onclick="openLightbox(65)">
-        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 66</span></div>
-      </div>
-      <div class="mg-item" onclick="openLightbox(66)">
-        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 67</span></div>
-      </div>
-      <div class="mg-item" onclick="openLightbox(67)">
-        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 68</span></div>
-      </div>
-      <div class="mg-item" onclick="openLightbox(68)">
-        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 69</span></div>
-      </div>
-      <div class="mg-item" onclick="openLightbox(69)">
-        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 70</span></div>
-      </div>
-      <div class="mg-item" onclick="openLightbox(70)">
-        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 71</span></div>
-      </div>
-      <div class="mg-item" onclick="openLightbox(71)">
-        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 72</span></div>
-      </div>
-      <div class="mg-item" onclick="openLightbox(72)">
-        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 73</span></div>
-      </div>
-      <div class="mg-item" onclick="openLightbox(73)">
-        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 74</span></div>
-      </div>
-      <div class="mg-item" onclick="openLightbox(74)">
-        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 75</span></div>
-      </div>
-      <div class="mg-item" onclick="openLightbox(75)">
-        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 76</span></div>
-      </div>
-      <div class="mg-item" onclick="openLightbox(76)">
-        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 77</span></div>
-      </div>
-      <div class="mg-item" onclick="openLightbox(77)">
-        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 78</span></div>
-      </div>
-      <div class="mg-item" onclick="openLightbox(78)">
-        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 79</span></div>
-      </div>
-      <div class="mg-item" onclick="openLightbox(79)">
-        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 80</span></div>
-      </div>
-      <div class="mg-item" onclick="openLightbox(80)">
-        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 81</span></div>
-      </div>
-      <div class="mg-item" onclick="openLightbox(81)">
-        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 82</span></div>
-      </div>
-      <div class="mg-item" onclick="openLightbox(82)">
-        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 83</span></div>
-      </div>
-      <div class="mg-item" onclick="openLightbox(83)">
-        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 84</span></div>
-      </div>
-      <div class="mg-item" onclick="openLightbox(84)">
-        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 85</span></div>
-      </div>
-      <div class="mg-item" onclick="openLightbox(85)">
-        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 86</span></div>
-      </div>
-      <div class="mg-item" onclick="openLightbox(86)">
-        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 87</span></div>
-      </div>
-      <div class="mg-item" onclick="openLightbox(87)">
-        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 88</span></div>
-      </div>
-      <div class="mg-item" onclick="openLightbox(88)">
-        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 89</span></div>
-      </div>
-      <div class="mg-item" onclick="openLightbox(89)">
-        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 90</span></div>
-      </div>
-      <div class="mg-item" onclick="openLightbox(90)">
-        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 91</span></div>
-      </div>
-      <div class="mg-item" onclick="openLightbox(91)">
-        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 92</span></div>
-      </div>
-      <div class="mg-item" onclick="openLightbox(92)">
-        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 93</span></div>
-      </div>
-      <div class="mg-item" onclick="openLightbox(93)">
-        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 94</span></div>
-      </div>
-      <div class="mg-item" onclick="openLightbox(94)">
-        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 95</span></div>
-      </div>
-      <div class="mg-item" onclick="openLightbox(95)">
-        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 96</span></div>
-      </div>
-      <div class="mg-item" onclick="openLightbox(96)">
-        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 97</span></div>
-      </div>
-      <div class="mg-item" onclick="openLightbox(97)">
-        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 98</span></div>
-      </div>
-      <div class="mg-item" onclick="openLightbox(98)">
-        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 99</span></div>
-      </div>
-      <div class="mg-item" onclick="openLightbox(99)">
-        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 100</span></div>
-      </div>
-      <div class="mg-item" onclick="openLightbox(100)">
-        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 101</span></div>
-      </div>
-      <div class="mg-item" onclick="openLightbox(101)">
-        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 102</span></div>
-      </div>
-      <div class="mg-item" onclick="openLightbox(102)">
-        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 103</span></div>
-      </div>
-      <div class="mg-item" onclick="openLightbox(103)">
-        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 104</span></div>
-      </div>
-      <div class="mg-item" onclick="openLightbox(104)">
-        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 105</span></div>
-      </div>
-      <div class="mg-item" onclick="openLightbox(105)">
-        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 106</span></div>
-      </div>
-      <div class="mg-item" onclick="openLightbox(106)">
-        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 107</span></div>
-      </div>
-      <div class="mg-item" onclick="openLightbox(107)">
-        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 108</span></div>
-      </div>
-      <div class="mg-item" onclick="openLightbox(108)">
-        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 109</span></div>
-      </div>
-      <div class="mg-item" onclick="openLightbox(109)">
-        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 110</span></div>
-      </div>
-      <div class="mg-item" onclick="openLightbox(110)">
-        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 111</span></div>
-      </div>
-      <div class="mg-item" onclick="openLightbox(111)">
-        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 112</span></div>
-      </div>
-      <div class="mg-item" onclick="openLightbox(112)">
-        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 113</span></div>
-      </div>
-      <div class="mg-item" onclick="openLightbox(113)">
-        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 114</span></div>
-      </div>
-      <div class="mg-item" onclick="openLightbox(114)">
-        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 115</span></div>
-      </div>
-      <div class="mg-item" onclick="openLightbox(115)">
-        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 116</span></div>
-      </div>
-      <div class="mg-item" onclick="openLightbox(116)">
-        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 117</span></div>
-      </div>
-      <div class="mg-item" onclick="openLightbox(117)">
-        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 118</span></div>
-      </div>
-      <div class="mg-item" onclick="openLightbox(118)">
-        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 119</span></div>
-      </div>
-      <div class="mg-item" onclick="openLightbox(119)">
-        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 120</span></div>
-      </div>
-      <div class="mg-item" onclick="openLightbox(120)">
-        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 121</span></div>
-      </div>
-      <div class="mg-item" onclick="openLightbox(121)">
-        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 122</span></div>
-      </div>
-      <div class="mg-item" onclick="openLightbox(122)">
-        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 123</span></div>
-      </div>
-      <div class="mg-item" onclick="openLightbox(123)">
-        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 124</span></div>
-      </div>
-      <div class="mg-item" onclick="openLightbox(124)">
-        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 125</span></div>
-      </div>
-      <div class="mg-item" onclick="openLightbox(125)">
-        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 126</span></div>
-      </div>
-      <div class="mg-item" onclick="openLightbox(126)">
-        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 127</span></div>
-      </div>
-      <div class="mg-item" onclick="openLightbox(127)">
-        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 128</span></div>
-      </div>
-      <div class="mg-item" onclick="openLightbox(128)">
-        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 129</span></div>
-      </div>
-      <div class="mg-item" onclick="openLightbox(129)">
-        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 130</span></div>
-      </div>
-      <div class="mg-item" onclick="openLightbox(130)">
-        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 131</span></div>
-      </div>
-      <div class="mg-item" onclick="openLightbox(131)">
-        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 132</span></div>
-      </div>
-      <div class="mg-item" onclick="openLightbox(132)">
-        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 133</span></div>
-      </div>
-      <div class="mg-item" onclick="openLightbox(133)">
-        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 134</span></div>
-      </div>
-      <div class="mg-item" onclick="openLightbox(134)">
-        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 135</span></div>
-      </div>
-      <div class="mg-item" onclick="openLightbox(135)">
-        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 136</span></div>
-      </div>
-      <div class="mg-item" onclick="openLightbox(136)">
-        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 137</span></div>
-      </div>
-      <div class="mg-item" onclick="openLightbox(137)">
-        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 138</span></div>
-      </div>
-      <div class="mg-item" onclick="openLightbox(138)">
-        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 139</span></div>
-      </div>
-      <div class="mg-item" onclick="openLightbox(139)">
-        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 140</span></div>
-      </div>
-      <div class="mg-item" onclick="openLightbox(140)">
-        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 141</span></div>
-      </div>
-      <div class="mg-item" onclick="openLightbox(141)">
-        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 142</span></div>
-      </div>
-      <div class="mg-item" onclick="openLightbox(142)">
-        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 143</span></div>
-      </div>
-      <div class="mg-item" onclick="openLightbox(143)">
-        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 144</span></div>
-      </div>
-      <div class="mg-item" onclick="openLightbox(144)">
-        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 145</span></div>
-      </div>
-      <div class="mg-item" onclick="openLightbox(145)">
-        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 146</span></div>
-      </div>
-      <div class="mg-item" onclick="openLightbox(146)">
-        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 147</span></div>
-      </div>
-      <div class="mg-item" onclick="openLightbox(147)">
-        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 148</span></div>
-      </div>
-      <div class="mg-item" onclick="openLightbox(148)">
-        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 149</span></div>
-      </div>
-      <div class="mg-item" onclick="openLightbox(149)">
-        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 150</span></div>
-      </div>
-      <div class="mg-item" onclick="openLightbox(150)">
-        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 151</span></div>
-      </div>
-      <div class="mg-item" onclick="openLightbox(151)">
-        <div class="mg-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>სურათი 152</span></div>
-      </div>
-    </div>
+    <div class="modal-grid" id="modal-grid"></div>
   </div>
 </div>
 
@@ -996,182 +535,181 @@
 </footer>
 
 <script>
-  // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-  // ფოტოების სია — შეცვალეთ src-ები თქვენით
-  // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
   const PHOTOS = [
-
-    "./avejis-photoebi/mtavari-3/147.jpg",
-    "./avejis-photoebi/mtavari-3/251.jpg",
-    "./avejis-photoebi/mtavari-3/36.jpg",
-    "./avejis-photoebi/2.jpg",
-    "./avejis-photoebi/7.jpg",
-    "./avejis-photoebi/15.jpg",
-    "./avejis-photoebi/22.jpg",
-    "./avejis-photoebi/23.jpg",
-    "./avejis-photoebi/24.jpg",
-    "./avejis-photoebi/30.jpg",
-    "./avejis-photoebi/32.jpg",
-    "./avejis-photoebi/33.jpg",
-    "./avejis-photoebi/38.jpg",
-    "./avejis-photoebi/39.jpg",
-    "./avejis-photoebi/40.jpg",
-    "./avejis-photoebi/41.jpg",
-    "./avejis-photoebi/42.jpg",
-    "./avejis-photoebi/43.jpg",
-    "./avejis-photoebi/46.jpg", 
-    "./avejis-photoebi/49.jpg",
-    "./avejis-photoebi/50.jpg",
-    "./avejis-photoebi/51.jpg",
-    "./avejis-photoebi/52.jpg",
-    "./avejis-photoebi/53.jpg",
-    "./avejis-photoebi/54.jpg",
-    "./avejis-photoebi/56.jpg",
-    "./avejis-photoebi/57.jpg",
-    "./avejis-photoebi/58.jpg",
-    "./avejis-photoebi/59.jpg",
-    "./avejis-photoebi/60.jpg",
-    "./avejis-photoebi/61.jpg",
-    "./avejis-photoebi/62.jpg",
-    "./avejis-photoebi/63.jpg",
-    "./avejis-photoebi/76.jpg",
-    "./avejis-photoebi/79.jpg",
-    "./avejis-photoebi/80.jpg",
-    "./avejis-photoebi/81.jpg",
-    "./avejis-photoebi/82.jpg",
-    "./avejis-photoebi/83.jpg",
-    "./avejis-photoebi/84.jpg",
-    "./avejis-photoebi/85.jpg",
-    "./avejis-photoebi/86.jpg",
-    "./avejis-photoebi/87.jpg",
-    "./avejis-photoebi/88.jpg",
-    "./avejis-photoebi/89.jpg",
-    "./avejis-photoebi/90.jpg",
-    "./avejis-photoebi/91.jpg",
-    "./avejis-photoebi/92.jpg",
-    "./avejis-photoebi/93.jpg",
-    "./avejis-photoebi/94.jpg",
-    "./avejis-photoebi/95.jpg",
-    "./avejis-photoebi/96.jpg",
-    "./avejis-photoebi/97.jpg",
-    "./avejis-photoebi/98.jpg",
-    "./avejis-photoebi/99.jpg",
-    "./avejis-photoebi/100.jpg",
-    "./avejis-photoebi/101.jpg",
-    "./avejis-photoebi/102.jpg",
-    "./avejis-photoebi/103.jpg",
-    "./avejis-photoebi/104.jpg",
-    "./avejis-photoebi/105.jpg",
-    "./avejis-photoebi/106.jpg",
-    "./avejis-photoebi/107.jpg",
-    "./avejis-photoebi/108.jpg",
-    "./avejis-photoebi/109.jpg",
-    "./avejis-photoebi/110.jpg",
-    "./avejis-photoebi/111.jpg",
-    "./avejis-photoebi/112.jpg",
-    "./avejis-photoebi/113.jpg",
-    "./avejis-photoebi/114.jpg",
-    "./avejis-photoebi/115.jpg",
-    "./avejis-photoebi/116.jpg",
-    "./avejis-photoebi/118.jpg",
-    "./avejis-photoebi/119.jpg",
-    "./avejis-photoebi/120.jpg",
-    "./avejis-photoebi/121.jpg",
-    "./avejis-photoebi/122.jpg",
-    "./avejis-photoebi/123.jpg",
-    "./avejis-photoebi/124.jpg",
-    "./avejis-photoebi/125.jpg",
-    "./avejis-photoebi/126.jpg",
-    "./avejis-photoebi/127.jpg",
-    "./avejis-photoebi/128.jpg",
-    "./avejis-photoebi/129.jpg",
-    "./avejis-photoebi/130.jpg",
-    "./avejis-photoebi/131.jpg",
-    "./avejis-photoebi/132.jpg",
-    "./avejis-photoebi/133.jpg",
-    "./avejis-photoebi/134.jpg",
-    "./avejis-photoebi/135.jpg",
-    "./avejis-photoebi/136.jpg",
-    "./avejis-photoebi/137.jpg",
-    "./avejis-photoebi/138.jpg",
-    "./avejis-photoebi/139.jpg",
-    "./avejis-photoebi/140.jpg",
-    "./avejis-photoebi/141.jpg",
-    "./avejis-photoebi/142.jpg",
-    "./avejis-photoebi/143.jpg",
-    "./avejis-photoebi/144.jpg",
-    "./avejis-photoebi/145.jpg",
-    "./avejis-photoebi/146.jpg",
-    "./avejis-photoebi/148.jpg",
-    "./avejis-photoebi/149.jpg",
-    "./avejis-photoebi/150.jpg",
-    "./avejis-photoebi/151.jpg",
-    "./avejis-photoebi/152.jpg",
-    "./avejis-photoebi/153.jpg",
-    "./avejis-photoebi/154.jpg",
-    "./avejis-photoebi/155.jpg",
-    "./avejis-photoebi/156.jpg",
-    "./avejis-photoebi/157.jpg",
-    "./avejis-photoebi/158.jpg",
-    "./avejis-photoebi/159.jpg",
-    "./avejis-photoebi/160.jpg",
-    "./avejis-photoebi/161.jpg",
-    "./avejis-photoebi/162.jpg",
-    "./avejis-photoebi/163.jpg",
-    "./avejis-photoebi/164.jpg",
-    "./avejis-photoebi/165.jpg",
-    "./avejis-photoebi/166.jpg",
-    "./avejis-photoebi/167.jpg",
-    "./avejis-photoebi/168.jpg",
-    "./avejis-photoebi/169.jpg",
-    "./avejis-photoebi/170.jpg",
-    "./avejis-photoebi/171.jpg",
-    "./avejis-photoebi/172.jpg",
-    "./avejis-photoebi/173.jpg",
-    "./avejis-photoebi/174.jpg",
-    "./avejis-photoebi/175.jpg",
-    "./avejis-photoebi/176.jpg",
-    "./avejis-photoebi/177.jpg",
-    "./avejis-photoebi/178.jpg",
-    "./avejis-photoebi/179.jpg",
-    "./avejis-photoebi/180.jpg",
-    "./avejis-photoebi/181.jpg",
-    "./avejis-photoebi/182.jpg",
-    "./avejis-photoebi/183.jpg",
-    "./avejis-photoebi/184.jpg",
-    "./avejis-photoebi/185.jpg",
-    "./avejis-photoebi/186.jpg",
-    "./avejis-photoebi/187.jpg",
-    "./avejis-photoebi/190.jpg",
-    "./avejis-photoebi/191.jpg",
-    "./avejis-photoebi/192.jpg",
-    "./avejis-photoebi/193.jpg",
-    "./avejis-photoebi/194.jpg",
-    "./avejis-photoebi/195.jpg",
-    "./avejis-photoebi/196.jpg",
-    "./avejis-photoebi/197.jpg",
-    "./avejis-photoebi/198.jpg",
-    "./avejis-photoebi/199.jpg",
-    "./avejis-photoebi/200.jpg",
+    "/-/avejis-photoebi/mtavari-3/147.jpg",
+    "/-/avejis-photoebi/mtavari-3/251.jpg",
+    "/-/avejis-photoebi/mtavari-3/36.jpg",
+    "/-/avejis-photoebi/2.jpg",
+    "/-/avejis-photoebi/7.jpg",
+    "/-/avejis-photoebi/15.jpg",
+    "/-/avejis-photoebi/22.jpg",
+    "/-/avejis-photoebi/23.jpg",
+    "/-/avejis-photoebi/24.jpg",
+    "/-/avejis-photoebi/30.jpg",
+    "/-/avejis-photoebi/32.jpg",
+    "/-/avejis-photoebi/33.jpg",
+    "/-/avejis-photoebi/38.jpg",
+    "/-/avejis-photoebi/39.jpg",
+    "/-/avejis-photoebi/40.jpg",
+    "/-/avejis-photoebi/41.jpg",
+    "/-/avejis-photoebi/42.jpg",
+    "/-/avejis-photoebi/43.jpg",
+    "/-/avejis-photoebi/46.jpg",
+    "/-/avejis-photoebi/49.jpg",
+    "/-/avejis-photoebi/50.jpg",
+    "/-/avejis-photoebi/51.jpg",
+    "/-/avejis-photoebi/52.jpg",
+    "/-/avejis-photoebi/53.jpg",
+    "/-/avejis-photoebi/54.jpg",
+    "/-/avejis-photoebi/56.jpg",
+    "/-/avejis-photoebi/57.jpg",
+    "/-/avejis-photoebi/58.jpg",
+    "/-/avejis-photoebi/59.jpg",
+    "/-/avejis-photoebi/60.jpg",
+    "/-/avejis-photoebi/61.jpg",
+    "/-/avejis-photoebi/62.jpg",
+    "/-/avejis-photoebi/63.jpg",
+    "/-/avejis-photoebi/76.jpg",
+    "/-/avejis-photoebi/79.jpg",
+    "/-/avejis-photoebi/80.jpg",
+    "/-/avejis-photoebi/81.jpg",
+    "/-/avejis-photoebi/82.jpg",
+    "/-/avejis-photoebi/83.jpg",
+    "/-/avejis-photoebi/84.jpg",
+    "/-/avejis-photoebi/85.jpg",
+    "/-/avejis-photoebi/86.jpg",
+    "/-/avejis-photoebi/87.jpg",
+    "/-/avejis-photoebi/88.jpg",
+    "/-/avejis-photoebi/89.jpg",
+    "/-/avejis-photoebi/90.jpg",
+    "/-/avejis-photoebi/91.jpg",
+    "/-/avejis-photoebi/92.jpg",
+    "/-/avejis-photoebi/93.jpg",
+    "/-/avejis-photoebi/94.jpg",
+    "/-/avejis-photoebi/95.jpg",
+    "/-/avejis-photoebi/96.jpg",
+    "/-/avejis-photoebi/97.jpg",
+    "/-/avejis-photoebi/98.jpg",
+    "/-/avejis-photoebi/99.jpg",
+    "/-/avejis-photoebi/100.jpg",
+    "/-/avejis-photoebi/101.jpg",
+    "/-/avejis-photoebi/102.jpg",
+    "/-/avejis-photoebi/103.jpg",
+    "/-/avejis-photoebi/104.jpg",
+    "/-/avejis-photoebi/105.jpg",
+    "/-/avejis-photoebi/106.jpg",
+    "/-/avejis-photoebi/107.jpg",
+    "/-/avejis-photoebi/108.jpg",
+    "/-/avejis-photoebi/109.jpg",
+    "/-/avejis-photoebi/110.jpg",
+    "/-/avejis-photoebi/111.jpg",
+    "/-/avejis-photoebi/112.jpg",
+    "/-/avejis-photoebi/113.jpg",
+    "/-/avejis-photoebi/114.jpg",
+    "/-/avejis-photoebi/115.jpg",
+    "/-/avejis-photoebi/116.jpg",
+    "/-/avejis-photoebi/118.jpg",
+    "/-/avejis-photoebi/119.jpg",
+    "/-/avejis-photoebi/120.jpg",
+    "/-/avejis-photoebi/121.jpg",
+    "/-/avejis-photoebi/122.jpg",
+    "/-/avejis-photoebi/123.jpg",
+    "/-/avejis-photoebi/124.jpg",
+    "/-/avejis-photoebi/125.jpg",
+    "/-/avejis-photoebi/126.jpg",
+    "/-/avejis-photoebi/127.jpg",
+    "/-/avejis-photoebi/128.jpg",
+    "/-/avejis-photoebi/129.jpg",
+    "/-/avejis-photoebi/130.jpg",
+    "/-/avejis-photoebi/131.jpg",
+    "/-/avejis-photoebi/132.jpg",
+    "/-/avejis-photoebi/133.jpg",
+    "/-/avejis-photoebi/134.jpg",
+    "/-/avejis-photoebi/135.jpg",
+    "/-/avejis-photoebi/136.jpg",
+    "/-/avejis-photoebi/137.jpg",
+    "/-/avejis-photoebi/138.jpg",
+    "/-/avejis-photoebi/139.jpg",
+    "/-/avejis-photoebi/140.jpg",
+    "/-/avejis-photoebi/141.jpg",
+    "/-/avejis-photoebi/142.jpg",
+    "/-/avejis-photoebi/143.jpg",
+    "/-/avejis-photoebi/144.jpg",
+    "/-/avejis-photoebi/145.jpg",
+    "/-/avejis-photoebi/146.jpg",
+    "/-/avejis-photoebi/148.jpg",
+    "/-/avejis-photoebi/149.jpg",
+    "/-/avejis-photoebi/150.jpg",
+    "/-/avejis-photoebi/151.jpg",
+    "/-/avejis-photoebi/152.jpg",
+    "/-/avejis-photoebi/153.jpg",
+    "/-/avejis-photoebi/154.jpg",
+    "/-/avejis-photoebi/155.jpg",
+    "/-/avejis-photoebi/156.jpg",
+    "/-/avejis-photoebi/157.jpg",
+    "/-/avejis-photoebi/158.jpg",
+    "/-/avejis-photoebi/159.jpg",
+    "/-/avejis-photoebi/160.jpg",
+    "/-/avejis-photoebi/161.jpg",
+    "/-/avejis-photoebi/162.jpg",
+    "/-/avejis-photoebi/163.jpg",
+    "/-/avejis-photoebi/164.jpg",
+    "/-/avejis-photoebi/165.jpg",
+    "/-/avejis-photoebi/166.jpg",
+    "/-/avejis-photoebi/167.jpg",
+    "/-/avejis-photoebi/168.jpg",
+    "/-/avejis-photoebi/169.jpg",
+    "/-/avejis-photoebi/170.jpg",
+    "/-/avejis-photoebi/171.jpg",
+    "/-/avejis-photoebi/172.jpg",
+    "/-/avejis-photoebi/173.jpg",
+    "/-/avejis-photoebi/174.jpg",
+    "/-/avejis-photoebi/175.jpg",
+    "/-/avejis-photoebi/176.jpg",
+    "/-/avejis-photoebi/177.jpg",
+    "/-/avejis-photoebi/178.jpg",
+    "/-/avejis-photoebi/179.jpg",
+    "/-/avejis-photoebi/180.jpg",
+    "/-/avejis-photoebi/181.jpg",
+    "/-/avejis-photoebi/182.jpg",
+    "/-/avejis-photoebi/183.jpg",
+    "/-/avejis-photoebi/184.jpg",
+    "/-/avejis-photoebi/185.jpg",
+    "/-/avejis-photoebi/186.jpg",
+    "/-/avejis-photoebi/187.jpg",
+    "/-/avejis-photoebi/190.jpg",
+    "/-/avejis-photoebi/191.jpg",
+    "/-/avejis-photoebi/192.jpg",
+    "/-/avejis-photoebi/193.jpg",
+    "/-/avejis-photoebi/194.jpg",
+    "/-/avejis-photoebi/195.jpg",
+    "/-/avejis-photoebi/196.jpg",
+    "/-/avejis-photoebi/197.jpg",
+    "/-/avejis-photoebi/198.jpg",
+    "/-/avejis-photoebi/199.jpg",
+    "/-/avejis-photoebi/200.jpg",
   ];
 
-  const TOTAL = 152; // მთლიანი რაოდენობა
+  const TOTAL = 152;
 
-  // ── Preview grid სურათები (პირველი 9) ──
+  // Preview grid
   document.querySelectorAll('.pv-item').forEach((el, i) => {
     if (PHOTOS[i]) {
       el.innerHTML = `<img src="${PHOTOS[i]}" alt="ნამუშევარი" loading="lazy" />`;
     }
   });
 
-  // ── Modal grid სურათები ──
-  document.querySelectorAll('.mg-item').forEach((el, i) => {
-    if (PHOTOS[i]) {
-      el.innerHTML = `<img src="${PHOTOS[i]}" alt="ნამუშევარი" loading="lazy" /><div class="mg-overlay"><span class="mg-overlay-icon">⤢</span></div>`;
-    }
+  // Modal grid — build dynamically
+  const modalGrid = document.getElementById('modal-grid');
+  PHOTOS.forEach((src, i) => {
+    const div = document.createElement('div');
+    div.className = 'mg-item';
+    div.onclick = () => openLightbox(i);
+    div.innerHTML = `<img src="${src}" alt="ნამუშევარი ${i+1}" loading="lazy" /><div class="mg-overlay"><span class="mg-overlay-icon">⤢</span></div>`;
+    modalGrid.appendChild(div);
   });
 
-  // ── Modal ──
+  // Modal
   const gmodal = document.getElementById('gmodal');
 
   function openModal() {
@@ -1191,13 +729,29 @@
     }
   }
 
-  // ── Lightbox ──
+  // Lightbox
   let lbIndex = 0;
+  let _heroMode = false;
   const lightbox = document.getElementById('lightbox');
   const lbContent = document.getElementById('lb-content');
   const lbCounter = document.getElementById('lb-counter');
 
+  const HERO_PHOTOS = [
+    "/-/avejis-photoebi/mtavari-3/147.jpg",
+    "/-/avejis-photoebi/mtavari-3/251.jpg",
+    "/-/avejis-photoebi/mtavari-3/36.jpg",
+  ];
+
   function openLightbox(index) {
+    _heroMode = false;
+    lbIndex = index;
+    renderLb();
+    lightbox.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function openHeroLightbox(index) {
+    _heroMode = true;
     lbIndex = index;
     renderLb();
     lightbox.classList.add('open');
@@ -1205,6 +759,7 @@
   }
 
   function closeLightbox() {
+    _heroMode = false;
     lightbox.classList.remove('open');
     if (!gmodal.classList.contains('open')) {
       document.body.style.overflow = '';
@@ -1212,62 +767,27 @@
   }
 
   function renderLb() {
-    const src = PHOTOS[lbIndex];
-    if (src) {
-      lbContent.innerHTML = `<img src="${src}" alt="ნამუშევარი ${lbIndex+1}" />`;
-    } else {
-      lbContent.innerHTML = `<div class="lb-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>სურათი ${lbIndex+1}</div>`;
-    }
-    lbCounter.textContent = `${lbIndex+1} / ${TOTAL}`;
-  }
-
-  function lbPrev() { lbIndex = (lbIndex - 1 + TOTAL) % TOTAL; renderLb(); }
-  function lbNext() { lbIndex = (lbIndex + 1) % TOTAL; renderLb(); }
-
-  // ── Hero ფოტოების lightbox ──
-  const HERO_PHOTOS = [
-    "/avejis-photoebi/mtavari-3/147.jpg",
-    "/avejis-photoebi/mtavari-3/251.jpg",
-    "/avejis-photoebi/mtavari-3/36.jpg",
-  ];
-
-  function openHeroLightbox(index) {
-    // hero ფოტოებს ვაჩვენებთ იმავე lightbox-ში, დამოუკიდებლად
-    lbIndex = index;
-    // დროებით PHOTOS-ს ვცვლით hero ფოტოებით
-    _heroMode = true;
-    renderLbHero();
-    lightbox.classList.add('open');
-    document.body.style.overflow = 'hidden';
-  }
-
-  let _heroMode = false;
-
-  function renderLbHero() {
-    const src = HERO_PHOTOS[lbIndex];
+    const list = _heroMode ? HERO_PHOTOS : PHOTOS;
+    const total = _heroMode ? HERO_PHOTOS.length : TOTAL;
+    const src = list[lbIndex];
     lbContent.innerHTML = src
-      ? `<img src="${src}" alt="ნამუშევარი" />`
-      : `<div class="lb-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg></div>`;
-    lbCounter.textContent = `${lbIndex + 1} / ${HERO_PHOTOS.length}`;
+      ? `<img src="${src}" alt="ნამუშევარი ${lbIndex+1}" />`
+      : `<div class="lb-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>სურათი ${lbIndex+1}</div>`;
+    lbCounter.textContent = `${lbIndex+1} / ${total}`;
   }
 
-  // override lbPrev/lbNext to handle hero mode
   function lbPrev() {
-    if (_heroMode) { lbIndex = (lbIndex - 1 + HERO_PHOTOS.length) % HERO_PHOTOS.length; renderLbHero(); }
-    else { lbIndex = (lbIndex - 1 + TOTAL) % TOTAL; renderLb(); }
-  }
-  function lbNext() {
-    if (_heroMode) { lbIndex = (lbIndex + 1) % HERO_PHOTOS.length; renderLbHero(); }
-    else { lbIndex = (lbIndex + 1) % TOTAL; renderLb(); }
+    const total = _heroMode ? HERO_PHOTOS.length : TOTAL;
+    lbIndex = (lbIndex - 1 + total) % total;
+    renderLb();
   }
 
-  // reset hero mode on close
-  const _origCloseLightbox = closeLightbox;
-  function closeLightbox() {
-    _heroMode = false;
-    lightbox.classList.remove('open');
-    if (!gmodal.classList.contains('open')) document.body.style.overflow = '';
+  function lbNext() {
+    const total = _heroMode ? HERO_PHOTOS.length : TOTAL;
+    lbIndex = (lbIndex + 1) % total;
+    renderLb();
   }
+
   document.addEventListener('keydown', e => {
     if (lightbox.classList.contains('open')) {
       if (e.key === 'ArrowLeft') lbPrev();
@@ -1278,7 +798,6 @@
     }
   });
 
-  // click outside lightbox image
   lightbox.addEventListener('click', e => {
     if (e.target === lightbox) closeLightbox();
   });
