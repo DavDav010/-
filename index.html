@@ -60,10 +60,10 @@
     .stats-bar { background: var(--bronze); padding: 2rem 5vw; display: flex; align-items: center; justify-content: space-around; gap: 2rem; flex-wrap: wrap; }
     .stat-item { text-align: center; color: var(--coal); }
     .stat-number { font-family: 'Playfair Display', serif; font-size: 2.5rem; font-weight: 700; line-height: 1; margin-bottom: 0.3rem; }
-    .stat-label { font-size: 1.25rem; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; opacity: 0.75; }
+    .stat-label { font-size: 0.8rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; opacity: 0.75; }
     .stat-divider { width: 1px; height: 50px; background: rgba(28,26,23,0.2); }
 
-    /* ── FEATURES ── */ 
+    /* ── FEATURES ── */
     .features { padding: 7rem 5vw; }
     .section-header { display: flex; align-items: flex-end; justify-content: space-between; margin-bottom: 4rem; flex-wrap: wrap; gap: 2rem; }
     .section-eyebrow { font-size: 1.75rem; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; color: var(--bronze); margin-bottom: 0.75rem; }
@@ -176,8 +176,12 @@
 
     .gmodal-body {
       flex: 1;
-      overflow-y: auto;
+      overflow-y: scroll;
+      overflow-x: hidden;
       padding: 1.5rem 2rem 2rem;
+      -webkit-overflow-scrolling: touch;
+      scroll-behavior: smooth;
+      will-change: scroll-position;
     }
 
     .modal-grid {
@@ -193,11 +197,16 @@
       cursor: pointer;
       position: relative;
       background: var(--card-bg);
-      border: 1px dashed rgba(184,147,90,0.18);
+      border: 1px solid rgba(184,147,90,0.12);
       transition: transform 0.2s;
+      contain: layout style paint;
     }
     .mg-item:hover { transform: scale(1.03); z-index: 2; }
-    .mg-item img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .mg-item img {
+      width: 100%; height: 100%;
+      object-fit: cover; display: block;
+      will-change: transform;
+    }
     .mg-item .mg-overlay {
       position: absolute; inset: 0;
       background: rgba(184,147,90,0.15);
@@ -287,8 +296,8 @@
     .process-step { position: relative; }
     .process-step:not(:last-child)::after { content: ''; position: absolute; top: 22px; left: calc(100% - 1.5rem); width: calc(3rem + 1px); height: 1px; background: var(--divider); }
     .step-num { font-family: 'Playfair Display', serif; font-size: 3rem; font-weight: 700; color: rgba(184,147,90,0.15); line-height: 1; margin-bottom: 1rem; }
-    .step-title { font-family: 'Playfair Display', serif; font-size: 1.60rem; font-weight: 600; color: var(--cream); margin-bottom: 0.5rem; }
-    .step-text { font-size: 1.20rem; line-height: 1.7; color: rgba(245,240,232,0.55); }
+    .step-title { font-family: 'Playfair Display', serif; font-size: 1.25rem; font-weight: 600; color: var(--cream); margin-bottom: 0.5rem; }
+    .step-text { font-size: 1.00rem; line-height: 1.7; color: rgba(245,240,232,0.55); }
 
     /* ── CTA BANNER ── */
     .cta-banner { padding: 6rem 5vw; display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 3rem; border-top: 1px solid var(--divider); border-bottom: 1px solid var(--divider); }
@@ -399,7 +408,7 @@
     </div>
     <div class="feature-card">
       <div class="feature-icon">🏆</div>
-      <h3>30+ წლის გამოცდილება</h3>
+      <h3>30+ წლის ოსტატობა</h3>
       <p>წლების გამოცდილება ნიშნავს, რომ ჩვენ ვიცით ხის ყოველი ნიუანსი — სწორი მასალის შერჩევიდან დაწყებული, სრულყოფილ ფინიშამდე. ყოველი ნამუშევარი ატარებს ხელოსნის ინდივიდუალურ ხელწერას.</p>
     </div>
     <div class="feature-card">
@@ -699,14 +708,37 @@
     }
   });
 
-  // Modal grid — build dynamically
+  // Modal grid — build with IntersectionObserver lazy loading
   const modalGrid = document.getElementById('modal-grid');
+
+  const imgObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const img = entry.target;
+        if (img.dataset.src) {
+          img.src = img.dataset.src;
+          img.removeAttribute('data-src');
+          imgObserver.unobserve(img);
+        }
+      }
+    });
+  }, { rootMargin: '200px' });
+
   PHOTOS.forEach((src, i) => {
     const div = document.createElement('div');
     div.className = 'mg-item';
     div.onclick = () => openLightbox(i);
-    div.innerHTML = `<img src="${src}" alt="ნამუშევარი ${i+1}" loading="lazy" /><div class="mg-overlay"><span class="mg-overlay-icon">⤢</span></div>`;
+    const img = document.createElement('img');
+    img.dataset.src = src;
+    img.alt = `ნამუშევარი ${i+1}`;
+    img.style.cssText = 'width:100%;height:100%;object-fit:cover;display:block;';
+    const overlay = document.createElement('div');
+    overlay.className = 'mg-overlay';
+    overlay.innerHTML = '<span class="mg-overlay-icon">⤢</span>';
+    div.appendChild(img);
+    div.appendChild(overlay);
     modalGrid.appendChild(div);
+    imgObserver.observe(img);
   });
 
   // Modal
