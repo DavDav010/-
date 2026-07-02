@@ -1,0 +1,907 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Furniture Master — Handmade Furniture For You</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --coal: #1C1A17;
+      --cream: #F5F0E8;
+      --bronze: #B8935A;
+      --bronze-light: #D4AA72;
+      --warm-gray: #6B6560; 
+      --card-bg: #252220;
+      --divider: rgba(184,147,90,0.25);
+    }
+
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; background: var(--coal); color: var(--cream); overflow-x: hidden; }
+
+    /* ── NAV ── */
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 1.25rem 5vw; background: rgba(28,26,23,0.85); backdrop-filter: blur(12px); border-bottom: 1px solid var(--divider); }
+    .nav-logo { font-family: 'Playfair Display', serif; font-size: 1.55rem; font-weight: 700; color: var(--cream); letter-spacing: 0.02em; }
+    .nav-logo span { color: var(--bronze); }
+    .nav-links { display: flex; align-items: center; gap: 2.5rem; list-style: none; }
+    .nav-links a { color: rgba(245,240,232,0.7); text-decoration: none; font-size: 1.15rem; font-weight: 500; letter-spacing: 0.05em; text-transform: uppercase; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--bronze-light); }
+    .nav-cta { background: var(--bronze); color: var(--coal) !important; padding: 0.6rem 1.4rem; border-radius: 2px; font-weight: 600 !important; transition: background 0.2s !important; }
+    .nav-cta:hover { background: var(--bronze-light) !important; color: var(--coal) !important; }
+
+    /* ── LANGUAGE SWITCHER ── */
+    .lang-switch { position: relative; }
+    .lang-btn { display: flex; align-items: center; gap: 0.5rem; background: rgba(184,147,90,0.08); border: 1px solid var(--divider); color: var(--cream); padding: 0.5rem 0.9rem; border-radius: 3px; cursor: pointer; font-size: 1.05rem; font-weight: 500; letter-spacing: 0.03em; transition: background 0.2s, border-color 0.2s; }
+    .lang-btn:hover { background: rgba(184,147,90,0.16); border-color: rgba(184,147,90,0.5); }
+    .lang-flag { font-size: 1.15rem; line-height: 1; }
+    .lang-caret { font-size: 0.65rem; opacity: 0.6; transition: transform 0.2s; }
+    .lang-switch.open .lang-caret { transform: rotate(180deg); }
+    .lang-dropdown { position: absolute; top: calc(100% + 0.6rem); right: 0; background: var(--card-bg); border: 1px solid var(--divider); border-radius: 4px; min-width: 150px; overflow: hidden; opacity: 0; visibility: hidden; transform: translateY(-6px); transition: opacity 0.2s, transform 0.2s, visibility 0.2s; box-shadow: 0 12px 28px rgba(0,0,0,0.35); }
+    .lang-switch.open .lang-dropdown { opacity: 1; visibility: visible; transform: translateY(0); }
+    .lang-option { display: flex; align-items: center; gap: 0.65rem; padding: 0.7rem 1rem; color: rgba(245,240,232,0.8); text-decoration: none; font-size: 1.0rem; font-weight: 500; transition: background 0.15s, color 0.15s; }
+    .lang-option:hover { background: rgba(184,147,90,0.12); color: var(--bronze-light); }
+    .lang-option.current { color: var(--bronze); background: rgba(184,147,90,0.08); }
+
+    /* ── HERO ── */
+    .hero { min-height: 100vh; display: grid; grid-template-columns: 1fr 1fr; align-items: center; padding: 0 5vw; padding-top: 80px; gap: 4rem; position: relative; overflow: hidden; }
+    .hero::before { content: ''; position: absolute; top: 0; right: 0; width: 55%; height: 100%; background: linear-gradient(135deg, var(--card-bg) 0%, #2a2520 100%); clip-path: polygon(10% 0, 100% 0, 100% 100%, 0% 100%); }
+    .hero-text { position: relative; z-index: 2; }
+    .hero-eyebrow { display: inline-flex; align-items: center; gap: 0.75rem; font-size: 1.95rem; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; color: var(--bronze); margin-bottom: 1.75rem; }
+    .hero-eyebrow::before { content: ''; display: block; width: 2.5rem; height: 1px; background: var(--bronze); }
+    .hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(2.6rem, 5vw, 4.2rem); line-height: 1.1; font-weight: 700; margin-bottom: 1.5rem; color: var(--cream); }
+    .hero h1 em { font-style: italic; color: var(--bronze); }
+    .hero-desc { font-size: 1.25rem; line-height: 1.75; color: rgba(245,240,232,0.65); max-width: 440px; margin-bottom: 2.5rem; }
+    .hero-actions { display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap; }
+    .btn-primary { background: var(--bronze); color: var(--coal); padding: 0.9rem 2.2rem; font-size: 1.5rem; font-weight: 600; letter-spacing: 0.05em; border: none; border-radius: 2px; cursor: pointer; text-decoration: none; transition: background 0.25s, transform 0.2s; display: inline-block; }
+    .btn-primary:hover { background: var(--bronze-light); transform: translateY(-2px); }
+    .btn-ghost { color: var(--cream); font-size: 1.25rem; font-weight: 500; text-decoration: none; display: inline-flex; align-items: center; gap: 0.5rem; opacity: 0.75; transition: opacity 0.2s; }
+    .btn-ghost:hover { opacity: 1; }
+    .btn-ghost::after { content: '↓'; font-size: 1rem; }
+    .hero-photo { position: relative; z-index: 2; display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 260px 180px; gap: 12px; }
+    .photo-slot { background: #2e2b27; border-radius: 4px; border: 1px dashed rgba(184,147,90,0.3); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0.6rem; color: rgba(184,147,90,0.5); font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase; transition: border-color 0.2s; overflow: hidden; cursor: pointer; }
+    .photo-slot img { transition: transform 0.4s ease; }
+    .photo-slot:hover img { transform: scale(1.05); }
+    .photo-slot:hover { border-color: rgba(184,147,90,0.6); }
+    .photo-slot svg { opacity: 0.4; }
+    .photo-slot.tall { grid-row: span 2; }
+
+    /* ── STATS BAR ── */
+    .stats-bar { background: var(--bronze); padding: 2rem 5vw; display: flex; align-items: center; justify-content: space-around; gap: 2rem; flex-wrap: wrap; }
+    .stat-item { text-align: center; color: var(--coal); }
+    .stat-number { font-family: 'Playfair Display', serif; font-size: 2.5rem; font-weight: 700; line-height: 1; margin-bottom: 0.3rem; }
+    .stat-label { font-size: 0.8rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; opacity: 0.75; }
+    .stat-divider { width: 1px; height: 50px; background: rgba(28,26,23,0.2); }
+
+    /* ── FEATURES ── */
+    .features { padding: 7rem 5vw; }
+    .section-header { display: flex; align-items: flex-end; justify-content: space-between; margin-bottom: 4rem; flex-wrap: wrap; gap: 2rem; }
+    .section-eyebrow { font-size: 1.75rem; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; color: var(--bronze); margin-bottom: 0.75rem; }
+    .section-title { font-family: 'Playfair Display', serif; font-size: clamp(1.8rem, 3.5vw, 2.8rem); font-weight: 700; line-height: 1.2; max-width: 420px; }
+    .features-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5px; background: var(--divider); }
+    .feature-card { background: var(--coal); padding: 3rem 2.5rem; position: relative; overflow: hidden; transition: background 0.3s; }
+    .feature-card::after { content: ''; position: absolute; bottom: 0; left: 0; width: 0; height: 2px; background: var(--bronze); transition: width 0.4s ease; }
+    .feature-card:hover { background: #201e1b; }
+    .feature-card:hover::after { width: 100%; }
+    .feature-icon { width: 56px; height: 56px; background: rgba(184,147,90,0.1); border-radius: 4px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.75rem; font-size: 1.6rem; }
+    .feature-card h3 { font-family: 'Playfair Display', serif; font-size: 1.25rem; font-weight: 600; margin-bottom: 0.9rem; color: var(--cream); }
+    .feature-card p { font-size: 1.00rem; line-height: 1.7; color: rgba(245,240,232,0.6); }
+
+    /* ── GALLERY PREVIEW ── */
+    .gallery-section { padding: 0 5vw 7rem; }
+
+    .preview-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      grid-template-rows: repeat(2, 220px);
+      gap: 10px;
+    }
+
+    .pv-item {
+      border-radius: 6px;
+      overflow: hidden;
+      cursor: pointer;
+      position: relative;
+      background: var(--card-bg);
+      border: 1px dashed rgba(184,147,90,0.2);
+      transition: transform 0.25s, border-color 0.25s;
+    }
+
+    .pv-item:hover { transform: scale(1.02); border-color: rgba(184,147,90,0.5); }
+
+    .pv-item img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.4s; }
+    .pv-item:hover img { transform: scale(1.06); }
+
+    .pv-placeholder {
+      width: 100%; height: 100%;
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      gap: 0.5rem; color: rgba(184,147,90,0.35);
+      font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase;
+    }
+    .pv-placeholder svg { width: 26px; height: 26px; opacity: 0.4; }
+
+    .pv-more {
+      border-radius: 6px;
+      overflow: hidden;
+      cursor: pointer;
+      position: relative;
+      background: var(--bronze);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      transition: background 0.25s, transform 0.25s;
+    }
+    .pv-more:hover { background: var(--bronze-light); transform: scale(1.02); }
+    .pv-more-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: var(--coal);
+      line-height: 1;
+    }
+    .pv-more-label {
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--coal);
+      opacity: 0.75;
+    }
+
+    /* ── GALLERY MODAL ── */
+    .gmodal {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 200;
+      background: rgba(10,9,8,0.97);
+      flex-direction: column;
+    }
+    .gmodal.open { display: flex; }
+
+    .gmodal-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.25rem 2rem;
+      border-bottom: 1px solid var(--divider);
+      flex-shrink: 0;
+    }
+    .gmodal-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--cream);
+    }
+    .gmodal-title span { color: var(--bronze); font-size: 0.9rem; font-family: 'Inter', sans-serif; font-weight: 400; margin-left: 1rem; opacity: 0.6; }
+    .gmodal-close {
+      background: none; border: none; cursor: pointer;
+      color: rgba(245,240,232,0.5); font-size: 1.6rem; line-height: 1;
+      transition: color 0.2s; padding: 0.25rem 0.5rem;
+    }
+    .gmodal-close:hover { color: var(--bronze); }
+
+    .gmodal-body {
+      flex: 1;
+      overflow-y: scroll;
+      overflow-x: hidden;
+      padding: 1.5rem 2rem 2rem;
+      -webkit-overflow-scrolling: touch;
+      scroll-behavior: smooth;
+      will-change: scroll-position;
+    }
+
+    .modal-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 8px;
+    }
+
+    .mg-item {
+      aspect-ratio: 1;
+      border-radius: 4px;
+      overflow: hidden;
+      cursor: pointer;
+      position: relative;
+      background: var(--card-bg);
+      border: 1px solid rgba(184,147,90,0.12);
+      transition: transform 0.2s;
+      contain: layout style paint;
+    }
+    .mg-item:hover { transform: scale(1.03); z-index: 2; }
+    .mg-item img {
+      width: 100%; height: 100%;
+      object-fit: cover; display: block;
+      will-change: transform;
+    }
+    .mg-item .mg-overlay {
+      position: absolute; inset: 0;
+      background: rgba(184,147,90,0.15);
+      opacity: 0; transition: opacity 0.2s;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .mg-item:hover .mg-overlay { opacity: 1; }
+    .mg-overlay-icon { font-size: 1.5rem; }
+
+    .mg-placeholder {
+      width: 100%; height: 100%;
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      gap: 0.4rem; color: rgba(184,147,90,0.3);
+      font-size: 0.65rem; letter-spacing: 0.08em; text-transform: uppercase;
+    }
+    .mg-placeholder svg { width: 22px; height: 22px; opacity: 0.35; }
+
+    /* ── LIGHTBOX ── */
+    .lightbox {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 300;
+      background: rgba(5,4,4,0.98);
+      align-items: center;
+      justify-content: center;
+    }
+    .lightbox.open { display: flex; }
+
+    .lb-close {
+      position: absolute; top: 1.25rem; right: 1.5rem;
+      background: none; border: none; cursor: pointer;
+      color: rgba(245,240,232,0.5); font-size: 1.8rem;
+      transition: color 0.2s; z-index: 10; line-height: 1;
+    }
+    .lb-close:hover { color: var(--bronze); }
+
+    .lb-main {
+      display: flex; align-items: center; gap: 1.5rem;
+      max-width: 95vw; max-height: 95vh;
+    }
+
+    .lb-nav {
+      background: rgba(184,147,90,0.1);
+      border: 1px solid var(--divider);
+      color: var(--cream); font-size: 1.8rem;
+      width: 52px; height: 52px; border-radius: 4px;
+      display: flex; align-items: center; justify-content: center;
+      cursor: pointer; transition: background 0.2s, color 0.2s;
+      flex-shrink: 0;
+    }
+    .lb-nav:hover { background: var(--bronze); color: var(--coal); }
+
+    .lb-img-wrap {
+      max-width: 80vw; max-height: 88vh;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .lb-img-wrap img {
+      max-width: 100%; max-height: 88vh;
+      object-fit: contain; border-radius: 4px;
+      display: block;
+    }
+
+    .lb-placeholder {
+      width: 500px; height: 380px;
+      background: var(--card-bg);
+      border-radius: 4px;
+      border: 1px dashed rgba(184,147,90,0.25);
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      gap: 1rem; color: rgba(184,147,90,0.4);
+      font-size: 0.85rem; letter-spacing: 0.08em;
+    }
+    .lb-placeholder svg { width: 48px; height: 48px; opacity: 0.3; }
+
+    .lb-counter {
+      position: absolute; bottom: 1.5rem; left: 50%;
+      transform: translateX(-50%);
+      font-size: 0.78rem; color: rgba(245,240,232,0.35);
+      letter-spacing: 0.12em;
+    }
+
+    /* ── PROCESS ── */
+    .process-section { padding: 7rem 5vw; background: var(--card-bg); }
+    .process-steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 3rem; margin-top: 4rem; }
+    .process-step { position: relative; }
+    .process-step:not(:last-child)::after { content: ''; position: absolute; top: 22px; left: calc(100% - 1.5rem); width: calc(3rem + 1px); height: 1px; background: var(--divider); }
+    .step-num { font-family: 'Playfair Display', serif; font-size: 3rem; font-weight: 700; color: rgba(184,147,90,0.15); line-height: 1; margin-bottom: 1rem; }
+    .step-title { font-family: 'Playfair Display', serif; font-size: 1.25rem; font-weight: 600; color: var(--cream); margin-bottom: 0.5rem; }
+    .step-text { font-size: 1.00rem; line-height: 1.7; color: rgba(245,240,232,0.55); }
+
+    /* ── CTA BANNER ── */
+    .cta-banner { padding: 6rem 5vw; display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 3rem; border-top: 1px solid var(--divider); border-bottom: 1px solid var(--divider); }
+    .cta-banner h2 { font-family: 'Playfair Display', serif; font-size: clamp(1.8rem, 3vw, 2.6rem); font-weight: 700; max-width: 540px; line-height: 1.2; }
+    .cta-banner h2 em { font-style: italic; color: var(--bronze); }
+    .cta-box { text-align: center; background: var(--card-bg); padding: 2.5rem 3rem; border-radius: 4px; border: 1px solid var(--divider); min-width: 260px; }
+    .cta-phone-label { font-size: 1.70rem; letter-spacing: 0.04em; text-transform: uppercase; color: var(--bronze); margin-bottom: 0.75rem; }
+    .cta-phone { font-family: 'Playfair Display', serif; font-size: 1.9rem; font-weight: 700; color: var(--cream); margin-bottom: 1.25rem; display: block; text-decoration: none; transition: color 0.2s; }
+    .cta-phone:hover { color: var(--bronze-light); }
+    .cta-note { font-size: 1.5rem; color: rgba(245,240,232,0.45); }
+
+    /* ── FOOTER ── */
+    footer { padding: 2.5rem 5vw; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; }
+    .footer-logo { font-family: 'Playfair Display', serif; font-size: 1.1rem; font-weight: 700; color: var(--cream); }
+    .footer-logo span { color: var(--bronze); }
+    .footer-copy { font-size: 1.00rem; color: rgba(245,240,232,0.3); }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 900px) {
+      .hero { grid-template-columns: 1fr; text-align: center; padding-top: 100px; padding-bottom: 4rem; }
+      .hero::before { display: none; }
+      .hero-desc { max-width: 100%; }
+      .hero-actions { justify-content: center; }
+      .hero-photo { grid-template-rows: 200px 140px; }
+      nav .nav-links a:not(.lang-switch a) { display: none; }
+      nav .nav-links { gap: 1rem; }
+      .features-grid { grid-template-columns: 1fr; }
+      .process-steps { grid-template-columns: 1fr 1fr; }
+      .process-step::after { display: none; }
+      .preview-grid { grid-template-columns: repeat(3, 1fr); grid-template-rows: repeat(4, 160px); }
+      .modal-grid { grid-template-columns: repeat(3, 1fr); }
+      .cta-banner { grid-template-columns: 1fr; text-align: center; }
+      .cta-box { width: 100%; }
+      .stat-divider { display: none; }
+    }
+    @media (max-width: 600px) {
+      .process-steps { grid-template-columns: 1fr; }
+      .preview-grid { grid-template-columns: repeat(2, 1fr); grid-template-rows: repeat(5, 150px); }
+      .modal-grid { grid-template-columns: repeat(2, 1fr); }
+      .lb-img-wrap { max-width: 95vw; }
+      .lb-placeholder { width: 280px; height: 220px; }
+      /* ── MOBILE POLISH (iOS/Android) ── */
+    @media (hover: none) {
+      .pv-item:hover, .mg-item:hover, .photo-slot:hover img, .feature-card:hover,
+      .pv-more:hover, .btn-primary:hover, .lb-nav:hover, .nav-links a:hover {
+        transform: none;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .gmodal-header { padding: 1rem 1.25rem; }
+      .gmodal-title { font-size: 1.05rem; }
+      .gmodal-title span { display: block; margin-left: 0; margin-top: 0.2rem; }
+      .gmodal-body { padding: 1rem 1rem 1.5rem; }
+      .modal-grid { gap: 6px; }
+      .lb-main { gap: 0.75rem; }
+      .lb-nav { width: 42px; height: 42px; font-size: 1.4rem; }
+      .lb-close { top: 0.85rem; right: 1rem; font-size: 1.5rem; }
+      .cta-box { padding: 2rem 1.5rem; }
+      .hero-photo { gap: 8px; }
+    }
+
+    @supports (-webkit-touch-callout: none) {
+      .gmodal, .lightbox { height: -webkit-fill-available; }
+    }
+
+    .mg-item img, .pv-item img {
+      -webkit-user-drag: none;
+      user-select: none;
+    } 
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">Furniture<span> Master</span></div>
+  <ul class="nav-links">
+    <li><a href="#features">Services</a></li>
+    <li><a href="#gallery">Portfolio</a></li>
+    <li><a href="#process">Process</a></li>
+    <li><a href="#contact" class="nav-cta">Contact Us</a></li>
+    <li>
+      <div class="lang-switch" id="langSwitch">
+        <button class="lang-btn" onclick="toggleLangDropdown(event)">
+          <span class="lang-flag">🇬🇧</span> ENG <span class="lang-caret">▼</span>
+        </button>
+        <div class="lang-dropdown">
+          <a href="index.html" class="lang-option"><span class="lang-flag">🇬🇪</span> ქართული</a>
+          <a href="en.html" class="lang-option current"><span class="lang-flag">🇬🇧</span> English</a>
+          <a href="ru.html" class="lang-option"><span class="lang-flag">🇷🇺</span> Русский</a>
+        </div>
+      </div>
+    </li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-text">
+    <div class="hero-eyebrow">Handmade Furniture in Tbilisi</div>
+    <h1>A new <em>character</em><br/>for your home</h1>
+    <p class="hero-desc">
+      Over 30 years of experience, affordable prices, and a fully
+      individual approach — that's what every client gets from us.
+    </p>
+    <div class="hero-actions">
+      <a href="#contact" class="btn-primary">Free Consultation</a>
+      <a href="#gallery" class="btn-ghost">Our Work</a>
+    </div>
+  </div>
+  <div class="hero-photo">
+    <div class="photo-slot tall" onclick="openHeroLightbox(0)">
+      <img src="avejis-photoebi/mtavari-3/147.webp" style="width:100%; height:100%; object-fit:cover; border-radius:4px;" />
+    </div>
+    <div class="photo-slot tall" onclick="openHeroLightbox(1)">
+      <img src="avejis-photoebi/mtavari-3/251.webp" style="width:100%; height:100%; object-fit:cover; border-radius:4px;" />
+    </div>
+    <div class="photo-slot tall" onclick="openHeroLightbox(2)">
+      <img src="avejis-photoebi/mtavari-3/36.webp" style="width:100%; height:100%; object-fit:cover; border-radius:4px;" />
+    </div>
+  </div>
+</section>
+
+<!-- STATS BAR -->
+<div class="stats-bar">
+  <div class="stat-item"><div class="stat-number">30+</div><div class="stat-label">Years of Experience</div></div>
+  <div class="stat-divider"></div>
+  <div class="stat-item"><div class="stat-number">500+</div><div class="stat-label">Happy Clients</div></div>
+  <div class="stat-divider"></div>
+  <div class="stat-item"><div class="stat-number">100%</div><div class="stat-label">Individual Approach</div></div>
+  <div class="stat-divider"></div>
+  <div class="stat-item"><div class="stat-number">★ 4.9</div><div class="stat-label">Client Rating</div></div>
+</div>
+
+<!-- FEATURES -->
+<section class="features" id="features">
+  <div class="section-header">
+    <div>
+      <div class="section-eyebrow">Why Us</div>
+      <h2 class="section-title">Three reasons<br/>clients choose us</h2>
+    </div>
+  </div>
+  <div class="features-grid">
+    <div class="feature-card">
+      <div class="feature-icon">💰</div>
+      <h3>Affordable Pricing</h3>
+      <p>We believe quality furniture should be accessible to everyone. We offer the most competitive prices on the market — without ever compromising on quality.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">🏆</div>
+      <h3>30+ Years of Craftsmanship</h3>
+      <p>Years of experience mean we know every nuance of wood — from choosing the right material to the finishing touches. Every piece carries the craftsman's personal signature.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">🎯</div>
+      <h3>Your Ideas, Our Execution</h3>
+      <p>Kitchen, bedroom, home office — any space, any style. We build exactly the furniture you've been dreaming of, in any size and design.</p>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="gallery-section" id="gallery">
+  <div class="section-header">
+    <div>
+      <div class="section-eyebrow">Our Work</div>
+      <h2 class="section-title">Our Portfolio</h2>
+    </div>
+  </div>
+
+  <div class="preview-grid">
+    <div class="pv-item" onclick="openModalAt(0)">
+      <div class="pv-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg></div>
+    </div>
+    <div class="pv-item" onclick="openModalAt(1)">
+      <div class="pv-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg></div>
+    </div>
+    <div class="pv-item" onclick="openModalAt(2)">
+      <div class="pv-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg></div>
+    </div>
+    <div class="pv-item" onclick="openModalAt(3)">
+      <div class="pv-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg></div>
+    </div>
+    <div class="pv-item" onclick="openModalAt(4)">
+      <div class="pv-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg></div>
+    </div>
+    <div class="pv-item" onclick="openModalAt(5)">
+      <div class="pv-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg></div>
+    </div>
+    <div class="pv-item" onclick="openModalAt(6)">
+      <div class="pv-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg></div>
+    </div>
+    <div class="pv-item" onclick="openModalAt(7)">
+      <div class="pv-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg></div>
+    </div>
+    <div class="pv-item" onclick="openModalAt(8)">
+      <div class="pv-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg></div>
+    </div>
+    <div class="pv-more" onclick="openModal()">
+      <div class="pv-more-num">+143</div>
+      <div class="pv-more-label" style="font-size: 0.95rem;">View Photos</div>
+      <div class="pv-more-label" style="opacity:0.5;font-size:0.95rem;">Click here</div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY MODAL -->
+<div class="gmodal" id="gmodal">
+  <div class="gmodal-header">
+    <div class="gmodal-title">Our Portfolio <span>152 Projects</span></div>
+    <button class="gmodal-close" onclick="closeModal()">✕</button>
+  </div>
+  <div class="gmodal-body">
+    <div class="modal-grid" id="modal-grid"></div>
+  </div>
+</div>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox">
+  <button class="lb-close" onclick="closeLightbox()">✕</button>
+  <div class="lb-main">
+    <button class="lb-nav" onclick="lbPrev()">&#8249;</button>
+    <div class="lb-img-wrap" id="lb-content">
+      <div class="lb-placeholder">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+        Photo
+      </div>
+    </div>
+    <button class="lb-nav" onclick="lbNext()">&#8250;</button>
+  </div>
+  <div class="lb-counter" id="lb-counter">1 / 152</div>
+</div>
+
+<!-- PROCESS -->
+<section class="process-section" id="process">
+  <div class="section-header">
+    <div>
+      <div class="section-eyebrow">How We Work</div>
+      <h2 class="section-title">A simple path<br/>to perfect furniture</h2>
+    </div>
+  </div>
+  <div class="process-steps">
+    <div class="process-step">
+      <div class="step-num">01</div>
+      <div class="step-title">Talk Directly With The Craftsman</div>
+      <p class="step-text">Give us a call and tell us about your vision. The first consultation is completely free.</p>
+    </div>
+    <div class="process-step">
+      <div class="step-num">02</div>
+      <div class="step-title">Project Development</div>
+      <p class="step-text">We create a custom sketch and agree on every detail together with you.</p>
+    </div>
+    <div class="process-step">
+      <div class="step-num">03</div>
+      <div class="step-title">Production</div>
+      <p class="step-text">An experienced craftsman creates a work of art in furniture form, exclusively for you, using the highest quality materials.</p>
+    </div>
+    <div class="process-step">
+      <div class="step-num">04</div>
+      <div class="step-title">Delivery & Installation</div>
+      <p class="step-text">Full installation — within the agreed timeframe, without delays. Delivery as scheduled.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-banner" id="contact">
+  <div>
+    <h2>Ready to create furniture<br/>that <em>tells a story</em>?</h2>
+  </div>
+  <div class="cta-box">
+    <div class="cta-phone-label">Call Us Now</div>
+    <a href="tel:+995574044343" class="cta-phone">574 04 43 43<br>568 84 55 50</a>
+    <div class="cta-note">Mon–Sat &nbsp;|&nbsp; 10:00 – 19:00</div>
+    <br/>
+    <a href="tel:+995574044343" class="btn-primary" style="width:100%;text-align:center;display:block;">Call Now</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">Furniture<span> Master</span></div>
+  <div class="footer-copy">© 2026 · All rights reserved</div>
+</footer>
+
+<script>
+  const PHOTOS = [
+    "avejis-photoebi/mtavari-3/147.webp",
+    "avejis-photoebi/mtavari-3/251.webp",
+    "avejis-photoebi/mtavari-3/36.webp",
+    "avejis-photoebi/2.webp",
+    "avejis-photoebi/7.webp",
+    "avejis-photoebi/15.webp",
+    "avejis-photoebi/22.webp",
+    "avejis-photoebi/23.webp",
+    "avejis-photoebi/24.webp",
+    "avejis-photoebi/30.webp",
+    "avejis-photoebi/32.webp",
+    "avejis-photoebi/33.webp",
+    "avejis-photoebi/38.webp",
+    "avejis-photoebi/39.webp",
+    "avejis-photoebi/40.webp",
+    "avejis-photoebi/41.webp",
+    "avejis-photoebi/42.webp",
+    "avejis-photoebi/43.webp",
+    "avejis-photoebi/46.webp",
+    "avejis-photoebi/49.webp",
+    "avejis-photoebi/50.webp",
+    "avejis-photoebi/52.webp",
+    "avejis-photoebi/53.webp",
+    "avejis-photoebi/54.webp",
+    "avejis-photoebi/56.webp",
+    "avejis-photoebi/57.webp",
+    "avejis-photoebi/58.webp",
+    "avejis-photoebi/59.webp",
+    "avejis-photoebi/60.webp",
+    "avejis-photoebi/61.webp",
+    "avejis-photoebi/62.webp",
+    "avejis-photoebi/63.webp",
+    "avejis-photoebi/76.webp",
+    "avejis-photoebi/79.webp",
+    "avejis-photoebi/80.webp",
+    "avejis-photoebi/81.webp",
+    "avejis-photoebi/82.webp",
+    "avejis-photoebi/83.webp",
+    "avejis-photoebi/84.webp",
+    "avejis-photoebi/85.webp",
+    "avejis-photoebi/86.webp",
+    "avejis-photoebi/87.webp",
+    "avejis-photoebi/88.webp",
+    "avejis-photoebi/89.webp",
+    "avejis-photoebi/90.webp",
+    "avejis-photoebi/91.webp",
+    "avejis-photoebi/92.webp",
+    "avejis-photoebi/93.webp",
+    "avejis-photoebi/94.webp",
+    "avejis-photoebi/95.webp",
+    "avejis-photoebi/96.webp",
+    "avejis-photoebi/97.webp",
+    "avejis-photoebi/98.webp",
+    "avejis-photoebi/99.webp",
+    "avejis-photoebi/100.webp",
+    "avejis-photoebi/101.webp",
+    "avejis-photoebi/102.webp",
+    "avejis-photoebi/103.webp",
+    "avejis-photoebi/104.webp",
+    "avejis-photoebi/105.webp",
+    "avejis-photoebi/106.webp",
+    "avejis-photoebi/107.webp",
+    "avejis-photoebi/108.webp",
+    "avejis-photoebi/109.webp",
+    "avejis-photoebi/110.webp",
+    "avejis-photoebi/111.webp",
+    "avejis-photoebi/112.webp",
+    "avejis-photoebi/113.webp",
+    "avejis-photoebi/114.webp",
+    "avejis-photoebi/115.webp",
+    "avejis-photoebi/116.webp",
+    "avejis-photoebi/118.webp",
+    "avejis-photoebi/119.webp",
+    "avejis-photoebi/120.webp",
+    "avejis-photoebi/121.webp",
+    "avejis-photoebi/122.webp",
+    "avejis-photoebi/123.webp",
+    "avejis-photoebi/124.webp",
+    "avejis-photoebi/125.webp",
+    "avejis-photoebi/126.webp",
+    "avejis-photoebi/127.webp",
+    "avejis-photoebi/128.webp",
+    "avejis-photoebi/129.webp",
+    "avejis-photoebi/130.webp",
+    "avejis-photoebi/131.webp",
+    "avejis-photoebi/132.webp",
+    "avejis-photoebi/133.webp",
+    "avejis-photoebi/134.webp",
+    "avejis-photoebi/135.webp",
+    "avejis-photoebi/136.webp",
+    "avejis-photoebi/137.webp",
+    "avejis-photoebi/138.webp",
+    "avejis-photoebi/139.webp",
+    "avejis-photoebi/140.webp",
+    "avejis-photoebi/141.webp",
+    "avejis-photoebi/142.webp",
+    "avejis-photoebi/143.webp",
+    "avejis-photoebi/144.webp",
+    "avejis-photoebi/145.webp",
+    "avejis-photoebi/146.webp",
+    "avejis-photoebi/148.webp",
+    "avejis-photoebi/149.webp",
+    "avejis-photoebi/150.webp",
+    "avejis-photoebi/151.webp",
+    "avejis-photoebi/152.webp",
+    "avejis-photoebi/153.webp",
+    "avejis-photoebi/154.webp",
+    "avejis-photoebi/155.webp",
+    "avejis-photoebi/156.webp",
+    "avejis-photoebi/157.webp",
+    "avejis-photoebi/158.webp",
+    "avejis-photoebi/159.webp",
+    "avejis-photoebi/160.webp",
+    "avejis-photoebi/161.webp",
+    "avejis-photoebi/162.webp",
+    "avejis-photoebi/163.webp",
+    "avejis-photoebi/164.webp",
+    "avejis-photoebi/165.webp",
+    "avejis-photoebi/166.webp",
+    "avejis-photoebi/167.webp",
+    "avejis-photoebi/168.webp",
+    "avejis-photoebi/169.webp",
+    "avejis-photoebi/170.webp",
+    "avejis-photoebi/171.webp",
+    "avejis-photoebi/172.webp",
+    "avejis-photoebi/173.webp",
+    "avejis-photoebi/174.webp",
+    "avejis-photoebi/175.webp",
+    "avejis-photoebi/176.webp",
+    "avejis-photoebi/177.webp",
+    "avejis-photoebi/178.webp",
+    "avejis-photoebi/179.webp",
+    "avejis-photoebi/180.webp",
+    "avejis-photoebi/181.webp",
+    "avejis-photoebi/182.webp",
+    "avejis-photoebi/183.webp",
+    "avejis-photoebi/184.webp",
+    "avejis-photoebi/185.webp",
+    "avejis-photoebi/186.webp",
+    "avejis-photoebi/187.webp",
+    "avejis-photoebi/190.webp",
+    "avejis-photoebi/191.webp",
+    "avejis-photoebi/192.webp",
+    "avejis-photoebi/193.webp",
+    "avejis-photoebi/194.webp",
+    "avejis-photoebi/195.webp",
+    "avejis-photoebi/196.webp",
+    "avejis-photoebi/197.webp",
+    "avejis-photoebi/198.webp",
+    "avejis-photoebi/199.webp",
+    "avejis-photoebi/200.webp",
+  ];
+
+  const TOTAL = 152;
+
+  // Preview grid
+  document.querySelectorAll('.pv-item').forEach((el, i) => {
+    if (PHOTOS[i]) {
+      el.innerHTML = `<img src="${PHOTOS[i]}" alt="Our work" loading="lazy" />`;
+    }
+  });
+
+  // Modal grid — smart preload (fast on mobile, still feels "all open")
+  const modalGrid = document.getElementById('modal-grid');
+
+  const mgObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const img = entry.target;
+        if (img.dataset.src) {
+          img.src = img.dataset.src;
+          img.removeAttribute('data-src');
+        }
+        mgObserver.unobserve(img);
+      }
+    });
+  }, { rootMargin: '1200px 0px' });
+
+  PHOTOS.forEach((src, i) => {
+    const div = document.createElement('div');
+    div.className = 'mg-item';
+    div.onclick = () => openLightbox(i);
+    const img = document.createElement('img');
+    img.decoding = 'async';
+    img.alt = `Our work ${i+1}`;
+    img.style.cssText = 'width:100%;height:100%;object-fit:cover;display:block;';
+    if (i < 15) {
+      img.src = src;
+    } else {
+      img.dataset.src = src;
+      mgObserver.observe(img);
+    }
+    const overlay = document.createElement('div');
+    overlay.className = 'mg-overlay';
+    overlay.innerHTML = '<span class="mg-overlay-icon">⤢</span>';
+    div.appendChild(img);
+    div.appendChild(overlay);
+    modalGrid.appendChild(div);
+  });
+
+  // Modal
+  const gmodal = document.getElementById('gmodal');
+
+  function openModal() {
+    gmodal.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function openModalAt(index) {
+    openModal();
+    setTimeout(() => openLightbox(index), 50);
+  }
+
+  function closeModal() {
+    gmodal.classList.remove('open');
+    if (!document.getElementById('lightbox').classList.contains('open')) {
+      document.body.style.overflow = '';
+    }
+  }
+
+  // Lightbox
+  let lbIndex = 0;
+  let _heroMode = false;
+  const lightbox = document.getElementById('lightbox');
+  const lbContent = document.getElementById('lb-content');
+  const lbCounter = document.getElementById('lb-counter');
+
+  const HERO_PHOTOS = [
+    "avejis-photoebi/mtavari-3/147.webp",
+    "avejis-photoebi/mtavari-3/251.webp",
+    "avejis-photoebi/mtavari-3/36.webp",
+  ];
+
+  function openLightbox(index) {  
+    _heroMode = false;
+    lbIndex = index;
+    renderLb();
+    lightbox.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function openHeroLightbox(index) {
+    _heroMode = true;
+    lbIndex = index;
+    renderLb();
+    lightbox.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeLightbox() {
+    _heroMode = false;
+    lightbox.classList.remove('open');
+    if (!gmodal.classList.contains('open')) {
+      document.body.style.overflow = '';
+    }
+  }
+
+  function renderLb() {
+    const list = _heroMode ? HERO_PHOTOS : PHOTOS;
+    const total = _heroMode ? HERO_PHOTOS.length : TOTAL;
+    const src = list[lbIndex];
+    lbContent.innerHTML = src
+      ? `<img src="${src}" alt="Our work ${lbIndex+1}" />`
+      : `<div class="lb-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>Photo ${lbIndex+1}</div>`;
+    lbCounter.textContent = `${lbIndex+1} / ${total}`;
+  }
+
+  function lbPrev() {
+    const total = _heroMode ? HERO_PHOTOS.length : TOTAL;
+    lbIndex = (lbIndex - 1 + total) % total;
+    renderLb();
+  }
+
+  function lbNext() {
+    const total = _heroMode ? HERO_PHOTOS.length : TOTAL;
+    lbIndex = (lbIndex + 1) % total;
+    renderLb();
+  }
+
+  document.addEventListener('keydown', e => {
+    if (lightbox.classList.contains('open')) {
+      if (e.key === 'ArrowLeft') lbPrev();
+      if (e.key === 'ArrowRight') lbNext();
+      if (e.key === 'Escape') closeLightbox();
+    } else if (gmodal.classList.contains('open')) {
+      if (e.key === 'Escape') closeModal();
+    }
+  });
+
+  lightbox.addEventListener('click', e => {
+    if (e.target === lightbox) closeLightbox();
+  });
+
+  // Language switcher
+  function toggleLangDropdown(e) {
+    e.stopPropagation();
+    document.getElementById('langSwitch').classList.toggle('open');
+  }
+  document.addEventListener('click', () => {
+    document.getElementById('langSwitch').classList.remove('open');
+  });
+</script>
+
+</body>
+</html>
