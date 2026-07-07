@@ -514,7 +514,7 @@
       <div class="pv-placeholder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg></div>
     </div>
     <div class="pv-more" onclick="openModal()">
-      <div class="pv-more-num">+143</div>
+      <div class="pv-more-num" id="pv-more-num">+143</div>
       <div class="pv-more-label" style="font-size: 0.95rem;">ფოტოს სანახავად</div>
       <div class="pv-more-label" style="opacity:0.5;font-size:0.95rem;">დააჭირეთ აქ</div>
     </div>
@@ -524,7 +524,7 @@
 <!-- GALLERY MODAL -->
 <div class="gmodal" id="gmodal">
   <div class="gmodal-header">
-    <div class="gmodal-title">ჩვენი პორტფოლიო <span>152 ნამუშევარი</span></div>
+    <div class="gmodal-title">ჩვენი პორტფოლიო <span id="modal-count">152 ნამუშევარი</span></div>
     <button class="gmodal-close" onclick="closeModal()">✕</button>
   </div>
   <div class="gmodal-body">
@@ -604,164 +604,71 @@
   const PHOTOS = [
     "avejis-photoebi/mtavari-3/147.webp",
     "avejis-photoebi/mtavari-3/36.webp",
-    "avejis-photoebi/2.webp",
-    "avejis-photoebi/7.webp",
     "avejis-photoebi/15.webp",
-    "avejis-photoebi/22.webp",
-    "avejis-photoebi/23.webp",
-    "avejis-photoebi/24.webp",
-    "avejis-photoebi/30.webp",
     "avejis-photoebi/32.webp",
     "avejis-photoebi/33.webp",
-    "avejis-photoebi/38.webp",
-    "avejis-photoebi/39.webp",
-    "avejis-photoebi/40.webp",
     "avejis-photoebi/41.webp",
     "avejis-photoebi/42.webp",
     "avejis-photoebi/43.webp",
     "avejis-photoebi/46.webp",
     "avejis-photoebi/49.webp",
-    "avejis-photoebi/50.webp",
     "avejis-photoebi/52.webp",
-    "avejis-photoebi/53.webp",
-    "avejis-photoebi/54.webp",
-    "avejis-photoebi/56.webp",
-    "avejis-photoebi/57.webp",
-    "avejis-photoebi/58.webp",
-    "avejis-photoebi/59.webp",
-    "avejis-photoebi/60.webp",
-    "avejis-photoebi/61.webp",
-    "avejis-photoebi/62.webp",
-    "avejis-photoebi/63.webp",
     "avejis-photoebi/76.webp",
-    "avejis-photoebi/79.webp",
-    "avejis-photoebi/80.webp",
-    "avejis-photoebi/81.webp",
-    "avejis-photoebi/82.webp",
     "avejis-photoebi/83.webp",
     "avejis-photoebi/84.webp",
-    "avejis-photoebi/85.webp",
-    "avejis-photoebi/86.webp",
-    "avejis-photoebi/87.webp",
     "avejis-photoebi/88.webp",
     "avejis-photoebi/89.webp",
     "avejis-photoebi/90.webp",
-    "avejis-photoebi/91.webp",
-    "avejis-photoebi/92.webp",
-    "avejis-photoebi/93.webp",
-    "avejis-photoebi/94.webp",
-    "avejis-photoebi/95.webp",
-    "avejis-photoebi/96.webp",
-    "avejis-photoebi/97.webp",
-    "avejis-photoebi/98.webp",
-    "avejis-photoebi/99.webp",
-    "avejis-photoebi/100.webp",
-    "avejis-photoebi/101.webp",
-    "avejis-photoebi/102.webp",
     "avejis-photoebi/103.webp",
-    "avejis-photoebi/104.webp",
     "avejis-photoebi/105.webp",
     "avejis-photoebi/106.webp",
-    "avejis-photoebi/107.webp",
-    "avejis-photoebi/108.webp",
-    "avejis-photoebi/109.webp",
     "avejis-photoebi/110.webp",
-    "avejis-photoebi/111.webp",
     "avejis-photoebi/112.webp",
     "avejis-photoebi/113.webp",
-    "avejis-photoebi/114.webp",
-    "avejis-photoebi/115.webp",
-    "avejis-photoebi/116.webp",
-    "avejis-photoebi/118.webp",
-    "avejis-photoebi/119.webp",
-    "avejis-photoebi/120.webp",
-    "avejis-photoebi/121.webp",
-    "avejis-photoebi/122.webp",
-    "avejis-photoebi/123.webp",
-    "avejis-photoebi/124.webp",
-    "avejis-photoebi/125.webp",
-    "avejis-photoebi/126.webp",
-    "avejis-photoebi/127.webp",
-    "avejis-photoebi/128.webp",
     "avejis-photoebi/129.webp",
     "avejis-photoebi/130.webp",
     "avejis-photoebi/131.webp",
     "avejis-photoebi/132.webp",
-    "avejis-photoebi/133.webp",
-    "avejis-photoebi/134.webp",
-    "avejis-photoebi/135.webp",
-    "avejis-photoebi/136.webp",
-    "avejis-photoebi/137.webp",
-    "avejis-photoebi/138.webp",
     "avejis-photoebi/139.webp",
-    "avejis-photoebi/140.webp",
-    "avejis-photoebi/141.webp",
-    "avejis-photoebi/142.webp",
-    "avejis-photoebi/143.webp",
-    "avejis-photoebi/144.webp",
-    "avejis-photoebi/145.webp",
-    "avejis-photoebi/146.webp",
-    "avejis-photoebi/148.webp",
     "avejis-photoebi/149.webp",
     "avejis-photoebi/150.webp",
-    "avejis-photoebi/151.webp",
-    "avejis-photoebi/152.webp",
-    "avejis-photoebi/153.webp",
     "avejis-photoebi/154.webp",
-    "avejis-photoebi/155.webp",
-    "avejis-photoebi/156.webp",
     "avejis-photoebi/157.webp",
     "avejis-photoebi/158.webp",
-    "avejis-photoebi/159.webp",
-    "avejis-photoebi/160.webp",
-    "avejis-photoebi/161.webp",
     "avejis-photoebi/162.webp",
     "avejis-photoebi/163.webp",
-    "avejis-photoebi/164.webp",
-    "avejis-photoebi/165.webp",
-    "avejis-photoebi/166.webp",
-    "avejis-photoebi/167.webp",
-    "avejis-photoebi/168.webp",
-    "avejis-photoebi/169.webp",
-    "avejis-photoebi/170.webp",
-    "avejis-photoebi/171.webp",
-    "avejis-photoebi/172.webp",
-    "avejis-photoebi/173.webp",
     "avejis-photoebi/174.webp",
     "avejis-photoebi/175.webp",
     "avejis-photoebi/176.webp",
-    "avejis-photoebi/177.webp",
     "avejis-photoebi/178.webp",
-    "avejis-photoebi/179.webp",
     "avejis-photoebi/180.webp",
     "avejis-photoebi/181.webp",
-    "avejis-photoebi/182.webp",
-    "avejis-photoebi/183.webp",
-    "avejis-photoebi/184.webp",
-    "avejis-photoebi/185.webp",
-    "avejis-photoebi/186.webp",
-    "avejis-photoebi/187.webp",
-    "avejis-photoebi/190.webp",
     "avejis-photoebi/191.webp",
     "avejis-photoebi/192.webp",
-    "avejis-photoebi/193.webp",
     "avejis-photoebi/194.webp",
     "avejis-photoebi/195.webp",
     "avejis-photoebi/196.webp",
-    "avejis-photoebi/197.webp",
     "avejis-photoebi/198.webp",
     "avejis-photoebi/199.webp",
-    "avejis-photoebi/200.webp",
   ];
 
-  const TOTAL = 152;
+ const TOTAL = PHOTOS.length;
+  const modalCountEl = document.getElementById('modal-count');
+  if (modalCountEl) modalCountEl.textContent = TOTAL + ' ნამუშევარი';
 
   // Preview grid
-  document.querySelectorAll('.pv-item').forEach((el, i) => {
+  const pvItems = document.querySelectorAll('.pv-item');
+  pvItems.forEach((el, i) => {
     if (PHOTOS[i]) {
       el.innerHTML = `<img src="${PHOTOS[i]}" alt="ნამუშევარი" loading="lazy" />`;
     }
   });
+
+  // Keep "+N" count in sync with the actual number of photos
+  const pvMoreNum = document.getElementById('pv-more-num');
+  if (pvMoreNum) {
+    pvMoreNum.textContent = '+' + Math.max(PHOTOS.length - pvItems.length, 0);
+  }
 
   // Modal grid — smart preload (fast on mobile, still feels "all open")
   const modalGrid = document.getElementById('modal-grid');
