@@ -51,10 +51,10 @@
     .hero { min-height: 100vh; display: grid; grid-template-columns: 1fr 1fr; align-items: center; padding: 0 5vw; padding-top: 80px; gap: 4rem; position: relative; overflow: hidden; }
     .hero::before { content: ''; position: absolute; top: 0; right: 0; width: 55%; height: 100%; background: linear-gradient(135deg, var(--card-bg) 0%, #2a2520 100%); clip-path: polygon(10% 0, 100% 0, 100% 100%, 0% 100%); }
     .hero-text { position: relative; z-index: 2; }
-    .hero-eyebrow { display: inline-flex; align-items: center; gap: 0.75rem; font-size: 1.95rem; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; color: var(--bronze); margin-bottom: 1.75rem; }
+    .hero-eyebrow { display: inline-flex; align-items: center; gap: 0.75rem; font-size: 2.25rem; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; color: var(--bronze); margin-bottom: 1.75rem; }
     .hero-eyebrow::before { content: ''; display: block; width: 2.5rem; height: 1px; background: var(--bronze); }
-    .hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(2.6rem, 5vw, 4.2rem); line-height: 1.1; font-weight: 700; margin-bottom: 1.5rem; color: var(--cream); }
-    .hero h1 em { font-style: italic; color: var(--bronze); }
+    .hero h2 { font-family: 'Playfair Display', serif; font-size: clamp(3.2rem, 4vw, 3.5rem); line-height: 1.1; font-weight: 700; margin-bottom: 1.5rem; color: var(--cream); }
+    .hero h2 em { font-style: italic; color: var(--bronze); }
     .hero-desc { font-size: 1.25rem; line-height: 1.75; color: rgba(245,240,232,0.65); max-width: 440px; margin-bottom: 2.5rem; }
     .hero-actions { display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap; }
     .btn-primary { background: var(--bronze); color: var(--coal); padding: 0.9rem 2.2rem; font-size: 1.5rem; font-weight: 600; letter-spacing: 0.05em; border: none; border-radius: 2px; cursor: pointer; text-decoration: none; transition: background 0.25s, transform 0.2s; display: inline-block; }
@@ -74,7 +74,7 @@
     .stats-bar { background: var(--bronze); padding: 2rem 5vw; display: flex; align-items: center; justify-content: space-around; gap: 2rem; flex-wrap: wrap; }
     .stat-item { text-align: center; color: var(--coal); }
     .stat-number { font-family: 'Playfair Display', serif; font-size: 2.5rem; font-weight: 700; line-height: 1; margin-bottom: 0.3rem; }
-    .stat-label { font-size: 0.8rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; opacity: 0.75; }
+    .stat-label { font-size: 1.05rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; opacity: 0.75; }
     .stat-divider { width: 1px; height: 50px; background: rgba(28,26,23,0.2); }
 
     /* ── FEATURES ── */
@@ -414,8 +414,8 @@
 <!-- HERO -->
 <section class="hero" id="home">
   <div class="hero-text">
-    <div class="hero-eyebrow">ხელნაკეთი ავეჯი თბილისში</div>
-    <h1>შენი სახლის<br/>ახალი <em>ხასიათი</em></h1>
+    <div class="hero-eyebrow"><h1>ავეჯის დამზადება შეკვეთით თბილისში</h1></div>
+    <h2>შენი სახლის<br/>ახალი <em>ხასიათი</em></h2>
     <p class="hero-desc">
       30 წელზე მეტი გამოცდილება, ხელმისაწვდომი ფასები და სრული ინდივიდუალური
       მიდგომა — ეს არის ის, რასაც ყოველი მომხმარებელი იღებს ჩვენგან.
@@ -446,7 +446,6 @@
   <div class="stat-divider"></div>
   <div class="stat-item"><div class="stat-number">100%</div><div class="stat-label">ინდივიდუალური მიდგომა</div></div>
   <div class="stat-divider"></div>
-  <div class="stat-item"><div class="stat-number">★ 4.9</div><div class="stat-label">კლიენტთა შეფასება</div></div>
 </div>
 
 <!-- FEATURES -->
